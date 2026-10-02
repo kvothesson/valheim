@@ -16,6 +16,9 @@ from datetime import datetime, timezone
 
 
 def main(dest):
+    missing = [k for k in ("FTP_HOST", "FTP_USER", "FTP_PASS") if not os.environ.get(k)]
+    if missing:
+        sys.exit(f"Faltan los secretos {', '.join(missing)}: cargalos en Settings > Secrets and variables > Actions.")
     host, user, pw = os.environ["FTP_HOST"], os.environ["FTP_USER"], os.environ["FTP_PASS"]
     port = int(os.environ.get("FTP_PORT") or 21)
     remote = os.environ.get("FTP_WORLD_DIR") or "save/worlds_local/gportal_unzip_ppqaovp_"
