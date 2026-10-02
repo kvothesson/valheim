@@ -12,6 +12,7 @@ import sys
 import urllib.request
 from datetime import datetime, timedelta, timezone
 
+from plan import Plan
 from zdo import parse_items, stable_hash, world_objects
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,6 +30,8 @@ STATION_HASH = {stable_hash(k): v for k, v in STATIONS.items()}
 # La base principal: lo que esta a menos de BASE_RADIUS metros cuenta como "base".
 BASE = (float(os.environ.get("BASE_X", 1290)), float(os.environ.get("BASE_Z", -195)))
 BASE_RADIUS = float(os.environ.get("BASE_RADIUS", 150))
+# El plano dibuja lo construido a menos de PLAN_RADIUS metros del centro de la base.
+PLAN_RADIUS = float(os.environ.get("PLAN_RADIUS", 110))
 ART = timezone(timedelta(hours=-3))
 
 
@@ -38,15 +41,17 @@ def name_es(prefab):
 
 def build(world_dir):
     containers, stations, used = [], [], set()
+    plan = Plan(BASE[0], BASE[1], PLAN_RADIUS)
     for z in world_objects(world_dir):
         pf = HASHES.get(z["prefab"])
+        plan.add(pf, z["pos"], z["yaw"])
         x, _, zz = z["pos"] or (0, 0, 0)
         if pf in KIND and ITEMS in z.get("bytes", {}):
             items = [[HASHES.get(h, hex(h)), s, q] for h, s, q in parse_items(z["bytes"][ITEMS])]
             if not items:
                 continue
             used.update(p for p, _, _ in items)
-            containers.append({"kind": KIND[pf], "x": round(x), "z": round(zz),
+            containers.append({"kind": KIND[pf], "x": round(x), "z": round(zz), "p": [round(x, 1), round(-zz, 1)],
                                "base": (x - BASE[0]) ** 2 + (zz - BASE[1]) ** 2 < BASE_RADIUS ** 2,
                                "items": items})
         elif z["prefab"] in STATION_HASH:
@@ -72,7 +77,7 @@ def build(world_dir):
     saved = datetime.fromtimestamp(os.path.getmtime(ok[-1]) if ok else 0, ART)
     return {"saved": saved.isoformat(timespec="minutes"),
             "built": datetime.now(ART).isoformat(timespec="minutes"),
-            "containers": containers, "stations": stations,
+            "containers": containers, "stations": stations, "plan": plan.to_json(),
             "names": {p: NAMES.get(p, {"es": p, "cat": "Otros"}) for p in sorted(used)}}
 
 

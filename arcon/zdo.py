@@ -75,9 +75,16 @@ def parse_chunk(path):
         else:
             z["pos"] = r.floats(3)
         z["prefab"] = r.u32()
+        z["yaw"] = 0.0
         if fl & 0x1000:
             w = struct.unpack_from("<H", data, r.p)[0]
-            r.p += 2 if w & 0x8000 else 4
+            if w & 0x8000:
+                # Solo giro horizontal (lo normal en piezas construidas): medios grados.
+                z["yaw"] = (w & 0x7FFF) / 2
+                r.p += 2
+            else:
+                z["yaw"] = None  # rotacion completa en 4 bytes; no la necesitamos
+                r.p += 4
         if fl & 0x01: r.u8(); r.u32()
         if fl & 0x02: z["floats"] = {r.u32(): r.floats()[0] for _ in range(r.count())}
         if fl & 0x04: z["vec3"] = {r.u32(): r.floats(3) for _ in range(r.count())}

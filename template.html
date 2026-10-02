@@ -93,7 +93,7 @@ header.panel { padding: 18px 20px 16px; display: grid; gap: 6px; }
 .ico.none { display: inline-block; }
 
 .where { padding: 6px 14px 12px 58px; display: grid; gap: 3px; font: .9rem var(--ui); background: rgba(0, 0, 0, .2); }
-.where div { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid rgba(255, 214, 160, .07); padding-top: 3px; }
+.where > div[data-ci] { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid rgba(255, 214, 160, .07); padding-top: 3px; }
 .where span:first-child { min-width: 0; overflow-wrap: anywhere; color: #eadfcd; }
 .empty { padding: 18px 14px; color: var(--muted); }
 
@@ -116,6 +116,25 @@ header.panel { padding: 18px 20px 16px; display: grid; gap: 6px; }
 .chest ul { margin: 0; padding: 4px 14px 14px; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 3px 18px; font: .9rem var(--ui); }
 .chest li { display: flex; justify-content: space-between; align-items: center; gap: 10px; border-top: 1px solid rgba(255, 214, 160, .07); padding-top: 3px; }
 .note { color: var(--muted); font: .88rem var(--ui); max-width: 65ch; margin: 0; }
+
+/* Plano de la base dentro de cada item: lo construido visto desde arriba, norte arriba. */
+.plan { margin: 4px 0 8px; border: 2px solid var(--frame); border-radius: 3px; background: #1b2a30;
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, .7); overflow: hidden; }
+.plan svg { display: block; width: 100%; height: min(62vh, 560px); }
+.plan .floor_wood { fill: #8a6440; stroke: #2a1b11; stroke-width: .15; }
+.plan .floor_stone { fill: #7d7a73; stroke: #2a1b11; stroke-width: .15; }
+.plan .wall_wood { fill: #d9b98c; }
+.plan .wall_stone { fill: #c9c4ba; }
+.plan .stake { fill: #9b7a4f; }
+.plan .station { fill: #a8927a; opacity: .7; }
+.plan .chest { fill: var(--amber); opacity: .3; }
+.plan .hit { fill: var(--gold); stroke: #1a0f08; stroke-width: .5; }
+.plan .halo { fill: none; stroke: var(--gold); stroke-width: .5; opacity: .55; }
+.plan .hit.focus { fill: #fff3c4; }
+.plan-note { color: var(--muted); font: .82rem var(--ui); display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.plan-note i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); margin-right: 5px; vertical-align: -1px; border: 1px solid #1a0f08; }
+.where div[data-ci] { cursor: default; }
+.where div[data-ci]:hover span:first-child { color: var(--gold); }
 
 @media (max-width: 640px) {
   .ledger-head, .item > summary { grid-template-columns: minmax(0, 1fr) 72px 44px; }
@@ -189,15 +208,15 @@ const save = () => { try { localStorage.setItem("arcon-state", JSON.stringify({ 
 
 function aggregate() {
   const m = new Map();
-  for (const c of D.containers) {
-    if (!state.scope.has(where(c))) continue;
+  D.containers.forEach((c, ci) => {
+    if (!state.scope.has(where(c))) return;
     for (const [p, s, q] of c.items) {
       let e = m.get(p);
       if (!e) m.set(p, e = { p, total: 0, at: new Map(), maxq: 1 });
       e.total += s; e.maxq = Math.max(e.maxq, q);
-      const k = place(c); e.at.set(k, (e.at.get(k) || 0) + s);
+      e.at.set(ci, (e.at.get(ci) || 0) + s);
     }
-  }
+  });
   return m;
 }
 
@@ -235,9 +254,9 @@ function renderList() {
   if (!rows.length) { el.innerHTML = `<div class="empty">No hay nada que coincida. Probá otra palabra o activá más lugares en “Dónde”.</div>`; return; }
   el.innerHTML = rows.map(e => {
     const at = [...e.at.entries()].sort((a, b) => b[1] - a[1]);
-    return `<details class="item"><summary><span class="name">${icon(e.p)}<span>${N(e.p)}${e.maxq > 1 ? ` <span class="q">hasta nivel ${e.maxq}</span>` : ""}</span></span>` +
+    return `<details class="item" data-ci="${at.map(a => a[0]).join(",")}"><summary><span class="name">${icon(e.p)}<span>${N(e.p)}${e.maxq > 1 ? ` <span class="q">hasta nivel ${e.maxq}</span>` : ""}</span></span>` +
       `<span class="cat">${C(e.p)}</span><span class="r num">${fmt(e.total)}</span><span class="r num">${e.at.size}</span></summary>` +
-      `<div class="where">${at.map(([k, n]) => `<div><span>${k}</span><span class="num">${fmt(n)}</span></div>`).join("")}</div></details>`;
+      `<div class="where"><div class="plan-slot"></div>${at.map(([ci, n]) => `<div data-ci="${ci}"><span>${place(D.containers[ci])}</span><span class="num">${fmt(n)}</span></div>`).join("")}</div></details>`;
   }).join("");
 }
 
@@ -261,6 +280,49 @@ document.getElementById("chests").innerHTML = [...D.containers]
       `<span class="s">${list.slice(0, 4).map(x => x[2]).join(", ")}${list.length > 4 ? ` y ${list.length - 4} más` : ""}</span></summary>` +
       `<ul>${list.map(([n, k]) => `<li><span class="name" style="display:flex;align-items:center;gap:8px;min-width:0">${n}</span><span class="num">${fmt(k)}</span></li>`).join("")}</ul></details>`;
   }).join("");
+
+
+// ---------- Plano de la base (se dibuja al abrir un item) ----------
+const P = D.plan;
+let planBase = null;
+function planStatic() {
+  if (planBase !== null || !P) return planBase;
+  const L = P.layers;
+  planBase = ["floor_wood", "floor_stone", "stake", "wall_wood", "wall_stone"].map(k => L[k] ? `<path class="${k}" d="${L[k]}"/>` : "").join("") +
+    P.stations.map(([x, y]) => `<circle class="station" cx="${x}" cy="${y}" r=".7"/>`).join("") +
+    D.containers.map((c, ci) => inPlan(c) ? `<rect class="chest" x="${c.p[0] - .45}" y="${c.p[1] - .45}" width=".9" height=".9"/>` : "").join("");
+  return planBase;
+}
+const inPlan = c => P && c.p[0] >= P.box[0] && c.p[0] <= P.box[0] + P.box[2] && c.p[1] >= P.box[1] && c.p[1] <= P.box[1] + P.box[3];
+// Encuadre: la zona de cofres de la base (con margen), agrandada si hace falta para que entren
+// los marcados. Asi la base se ve grande y el muro perimetral no se come la pantalla.
+function frame(cis) {
+  const pts = D.containers.filter(inPlan).map(c => c.p);
+  let [x0, y0, x1, y1] = [Math.min(...pts.map(p => p[0])) - 16, Math.min(...pts.map(p => p[1])) - 16,
+                          Math.max(...pts.map(p => p[0])) + 16, Math.max(...pts.map(p => p[1])) + 16];
+  for (const ci of cis) { const [x, y] = D.containers[ci].p; x0 = Math.min(x0, x - 10); y0 = Math.min(y0, y - 10); x1 = Math.max(x1, x + 10); y1 = Math.max(y1, y + 10); }
+  return [x0, y0, x1 - x0, y1 - y0].map(v => +v.toFixed(1));
+}
+function planFor(cis) {
+  const here = cis.filter(ci => inPlan(D.containers[ci])), away = cis.length - here.length;
+  if (!P || !here.length) return away ? `<p class="plan-note">Todo está fuera de la base.</p>` : "";
+  const pins = here.map(ci => { const [x, y] = D.containers[ci].p;
+    return `<circle class="halo" cx="${x}" cy="${y}" r="3"/><circle class="hit" id="pin-${ci}" cx="${x}" cy="${y}" r="1.3"><title>${place(D.containers[ci])}</title></circle>`; }).join("");
+  return `<div class="plan"><svg viewBox="${frame(here).join(" ")}" role="img" aria-label="Plano de la base con los cofres que tienen este item">${planStatic()}${pins}</svg></div>` +
+    `<p class="plan-note"><span><i></i>${here.length === 1 ? "Está acá" : `Está en estos ${here.length} lugares`}</span>` +
+    (away ? `<span>y ${away} fuera de la base (abajo, en la lista)</span>` : "") + `<span>Norte arriba</span></p>`;
+}
+document.getElementById("list").addEventListener("toggle", e => {
+  const d = e.target;
+  if (!d.open || !d.classList.contains("item")) return;
+  const slot = d.querySelector(".plan-slot");
+  if (slot && !slot.dataset.done) { slot.innerHTML = planFor(d.dataset.ci.split(",").map(Number)); slot.dataset.done = "1"; }
+}, true);
+document.getElementById("list").addEventListener("mouseover", e => {
+  const row = e.target.closest(".where div[data-ci]");
+  document.querySelectorAll(".plan .hit.focus").forEach(x => x.classList.remove("focus"));
+  if (row) { const pin = row.closest("details").querySelector(`#pin-${row.dataset.ci}`); if (pin) pin.classList.add("focus"); }
+});
 
 renderChips(); renderList();
 </script>
