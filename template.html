@@ -5,97 +5,122 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Arcón de Pancheim</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500;700&family=Alegreya+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Averia+Serif+Libre:wght@400;700&family=Averia+Sans+Libre:wght@400;700&display=swap">
 <style>
-/* Layout: one ledger column — filters, item ledger with expandable locations, then stations and chests. */
+/* Layout: one column of carved wooden panels, like Valheim's inventory and crafting windows:
+   filters, item ledger with expandable locations, then stations and chests.
+   Single dark look on purpose: the game's UI has no light mode. Colors sampled from an in-game screenshot. */
 :root {
-  --bg: #e9eef0;        /* fjord mist */
-  --panel: #f7f9fa;
-  --ink: #1d2830;
-  --muted: #5b6b75;
-  --line: #cdd7dc;
-  --accent: #96641f;    /* forged bronze */
-  --accent-soft: #f1e4cf;
-  --warn: #a8442f;
-  --ok: #3f7a52;
-  --display: "Alegreya SC", "Palatino Linotype", Georgia, serif;
-  --body: "Alegreya Sans", "Segoe UI", system-ui, sans-serif;
-  --mono: "IBM Plex Mono", Consolas, monospace;
+  --night: #140e0a;      /* behind the panels */
+  --wood: #422c1c;       /* crafting panel */
+  --frame: #2a1b11;      /* dark outer frame */
+  --bevel: #6b4a30;      /* lit inner edge */
+  --slot: #2e2622;       /* inventory slot */
+  --gold: #f2cc2a;       /* item title */
+  --amber: #f4bb73;      /* character name, headings */
+  --yellow: #deaa31;     /* stat values */
+  --select: #bc7f31;     /* selected recipe row */
+  --text: #faf9f8;
+  --muted: #c4ae8f;
+  --green: #9fcf6a;
+  --display: "Cinzel", "Trajan Pro", "Palatino Linotype", Georgia, serif;
+  --body: "Averia Serif Libre", Georgia, serif;
+  --ui: "Averia Sans Libre", "Segoe UI", system-ui, sans-serif;
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.012 0.32' numOctaves='3' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 0.10  0 0 0 0 0.06  0 0 0 0 0.03  0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23g)'/%3E%3C/svg%3E");
+  color-scheme: dark;
 }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --bg: #12181c; --panel: #1a2228; --ink: #e2e8eb; --muted: #93a3ac; --line: #2c3840;
-  --accent: #d6a45a; --accent-soft: #3a2e1c; --warn: #e07a62; --ok: #7cc192; color-scheme: dark } }
-:root[data-theme="dark"] {
-  --bg: #12181c; --panel: #1a2228; --ink: #e2e8eb; --muted: #93a3ac; --line: #2c3840;
-  --accent: #d6a45a; --accent-soft: #3a2e1c; --warn: #e07a62; --ok: #7cc192; color-scheme: dark }
-
-html { color-scheme: light; }
 :root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
-body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 var(--body); }
-.wrap { max-width: 1040px; margin: 0 auto; padding-inline: 16px; padding-block: 28px 64px; display: grid; gap: 28px; }
-h1, h2 { font-family: var(--display); font-weight: 700; margin: 0; text-wrap: balance; letter-spacing: .01em; }
-h1 { font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1.05; }
-h2 { font-size: 1.35rem; }
-.meta { color: var(--muted); font-size: .95rem; display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 8px; }
-.meta b { color: var(--ink); font-weight: 600; }
-.up { display: inline-block; margin-bottom: 6px; color: var(--muted); text-decoration: none; font-size: .9rem; }
-.up:hover, .up:focus-visible { color: var(--accent); }
-.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+body { margin: 0; color: var(--text); font: 16px/1.5 var(--body);
+  background: radial-gradient(ellipse at 50% -10%, #2a1d14 0%, var(--night) 60%) fixed, var(--night); }
+.wrap { max-width: 1040px; margin: 0 auto; padding-inline: 16px; padding-block: 28px 64px; display: grid; gap: 30px; }
 
+/* A carved panel: wood grain, dark frame, a lit bevel inside, a shadow outside. */
+.panel { background: var(--grain), linear-gradient(180deg, #4a3220, var(--wood) 40%, #3b271a); background-color: var(--wood);
+  border: 3px solid var(--frame); border-radius: 4px;
+  box-shadow: inset 0 0 0 1px var(--bevel), inset 0 2px 0 1px rgba(255, 214, 160, .07), inset 0 -10px 24px rgba(0, 0, 0, .28), 0 6px 18px rgba(0, 0, 0, .55); }
 
-.controls { display: grid; gap: 12px; }
-.search { width: 100%; box-sizing: border-box; font: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--ink); }
-.search:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+h1, h2 { font-family: var(--display); font-weight: 700; margin: 0; text-wrap: balance; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--amber); text-shadow: 0 2px 0 #1a0f08, 0 0 14px rgba(244, 187, 115, .18); }
+h1 { font-size: clamp(1.9rem, 5.5vw, 2.9rem); line-height: 1.05; color: var(--gold); }
+h2 { font-size: 1.15rem; display: flex; align-items: center; gap: 12px; }
+h2::after { content: ""; flex: 1; height: 2px; background: linear-gradient(90deg, var(--bevel), transparent); }
+h2::before { content: ""; width: 9px; height: 9px; transform: rotate(45deg); background: var(--select); box-shadow: 0 0 0 2px var(--frame); flex: none; }
+header.panel { padding: 18px 20px 16px; display: grid; gap: 6px; }
+.meta { color: var(--muted); font: .92rem var(--ui); display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.meta b { color: var(--yellow); font-weight: 700; }
+.up { color: var(--muted); text-decoration: none; font: .88rem var(--ui); justify-self: start; }
+.up:hover, .up:focus-visible { color: var(--gold); outline: none; }
+.num { font-family: var(--ui); font-weight: 700; color: var(--yellow); font-variant-numeric: tabular-nums; }
+
+.controls { display: grid; gap: 12px; padding: 14px; }
+.search { width: 100%; box-sizing: border-box; font: 1rem var(--ui); padding: 10px 12px; color: var(--text);
+  background: rgba(10, 6, 4, .55); border: 1px solid #1a110b; border-radius: 3px; box-shadow: inset 0 2px 6px rgba(0, 0, 0, .6), 0 1px 0 rgba(255, 214, 160, .08); }
+.search::placeholder { color: #9c8a72; }
+.search:focus-visible { outline: 2px solid var(--select); outline-offset: 1px; }
 .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-.chip { font: 500 .88rem var(--body); border: 1px solid var(--line); background: var(--panel); color: var(--ink); border-radius: 999px; padding: 5px 12px; cursor: pointer; }
-.chip[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--ink); }
-.chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
-.lbl { font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-right: 4px; }
+/* Chips look like the ELABORAR / MEJORAR tabs. */
+.chip { font: 700 .82rem var(--ui); text-transform: uppercase; letter-spacing: .05em; color: #e8dcc8; cursor: pointer;
+  background: linear-gradient(180deg, #5a4430, #3e2d1f); border: 1px solid #1f140c; border-radius: 3px; padding: 5px 11px;
+  box-shadow: inset 0 1px 0 rgba(255, 214, 160, .12); }
+.chip:hover { color: var(--gold); }
+.chip[aria-pressed="true"] { color: var(--gold); border-color: var(--select); background: linear-gradient(180deg, #6a4c2c, #4b3420); box-shadow: inset 0 0 0 1px rgba(242, 204, 42, .25); }
+.chip:focus-visible { outline: 2px solid var(--gold); outline-offset: 1px; }
+.lbl { font: 700 .74rem var(--ui); text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin-right: 4px; }
 
-.ledger { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
-.ledger-head, .item > summary { display: grid; grid-template-columns: minmax(0, 1fr) 150px 88px 70px; gap: 12px; align-items: baseline; padding: 9px 14px; }
-.ledger-head { font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); border-bottom: 1px solid var(--line); }
+.ledger { overflow: hidden; }
+.ledger-head, .item > summary { display: grid; grid-template-columns: minmax(0, 1fr) 150px 88px 70px; gap: 12px; align-items: center; padding: 7px 14px; }
+.ledger-head { font: 700 .74rem var(--ui); text-transform: uppercase; letter-spacing: .1em; color: var(--muted); border-bottom: 2px solid var(--frame); background: rgba(0, 0, 0, .18); }
 .ledger-head button { all: unset; cursor: pointer; }
-.ledger-head button:focus-visible { outline: 2px solid var(--accent); }
+.ledger-head button:hover, .ledger-head button:focus-visible { color: var(--gold); }
 .ledger-head .r, .item .r { text-align: right; }
-.item { border-bottom: 1px solid var(--line); }
+.item { border-bottom: 1px solid rgba(20, 12, 7, .55); }
 .item:last-child { border-bottom: 0; }
 .item > summary { cursor: pointer; list-style: none; }
 .item > summary::-webkit-details-marker { display: none; }
-.item > summary:hover { background: var(--accent-soft); }
-.item > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
-.item .name { font-weight: 500; overflow-wrap: anywhere; display: flex; align-items: center; gap: 10px; min-width: 0; }
-.ico { width: 32px; height: 32px; flex: none; object-fit: contain; }
-.ico.sm { width: 24px; height: 24px; }
-.ico.none { visibility: hidden; }
-.item > summary { align-items: center; }
-.item .q { color: var(--muted); font-size: .85rem; }
-.cat { color: var(--muted); font-size: .9rem; }
-.where { padding: 2px 14px 12px 28px; display: grid; gap: 4px; font-size: .92rem; }
-.where div { display: flex; justify-content: space-between; gap: 12px; border-top: 1px dashed var(--line); padding-top: 4px; }
-.where span:first-child { min-width: 0; overflow-wrap: anywhere; }
+/* Hover and open rows take the orange of the selected recipe in the cauldron. */
+.item > summary:hover, .item[open] > summary { background: linear-gradient(90deg, rgba(188, 127, 49, .85), rgba(188, 127, 49, .35)); }
+.item > summary:hover .num, .item[open] > summary .num { color: #fff3c4; }
+.item > summary:hover .cat, .item[open] > summary .cat { color: #f6e6cc; }
+.item > summary:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
+.item .name { overflow-wrap: anywhere; display: flex; align-items: center; gap: 10px; min-width: 0; }
+.cat { color: var(--muted); font: .88rem var(--ui); }
+.q { color: var(--green); font: .8rem var(--ui); }
+
+/* Icons sit in dark square slots, like the inventory grid. */
+.ico { width: 34px; height: 34px; padding: 3px; box-sizing: border-box; flex: none; object-fit: contain;
+  background: var(--slot); border: 1px solid #120c08; border-radius: 3px; box-shadow: inset 0 0 6px rgba(0, 0, 0, .7), 0 1px 0 rgba(255, 214, 160, .08); }
+.ico.sm { width: 28px; height: 28px; padding: 2px; }
+.ico.none { display: inline-block; }
+
+.where { padding: 6px 14px 12px 58px; display: grid; gap: 3px; font: .9rem var(--ui); background: rgba(0, 0, 0, .2); }
+.where div { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid rgba(255, 214, 160, .07); padding-top: 3px; }
+.where span:first-child { min-width: 0; overflow-wrap: anywhere; color: #eadfcd; }
 .empty { padding: 18px 14px; color: var(--muted); }
 
-.stations { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
-.st { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; display: grid; gap: 2px; }
-.st .k { font-weight: 600; }
-.st .d { color: var(--muted); font-size: .92rem; }
-.st .d.active { color: var(--ok); }
-.coord { font-family: var(--mono); font-size: .8rem; color: var(--muted); }
+.stations { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+.st { padding: 10px 14px; display: grid; gap: 2px; }
+.st .k { font-weight: 700; color: var(--amber); }
+.st .d { color: var(--muted); font: .9rem var(--ui); }
+.st .d.active { color: var(--green); }
+.coord { font: .78rem var(--ui); color: #a8927a; letter-spacing: .02em; }
 
-.chests { display: grid; gap: 8px; }
-.chest { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; }
-.chest > summary { cursor: pointer; padding: 9px 14px; display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; }
-.chest > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
-.chest .k { font-weight: 600; }
-.chest .s { color: var(--muted); font-size: .9rem; min-width: 0; overflow-wrap: anywhere; flex: 1 1 260px; }
-.chest ul { margin: 0; padding: 0 14px 12px; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 2px 18px; font-size: .92rem; }
-.chest li { display: flex; justify-content: space-between; align-items: center; gap: 10px; border-top: 1px dashed var(--line); padding-top: 3px; }
-.note { color: var(--muted); font-size: .9rem; max-width: 65ch; }
+.chests { display: grid; gap: 10px; }
+.chest > summary { cursor: pointer; padding: 10px 14px; display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; list-style: none; }
+.chest > summary::-webkit-details-marker { display: none; }
+.chest > summary::before { content: "▸"; color: var(--select); }
+.chest[open] > summary::before { content: "▾"; }
+.chest > summary:hover .k { color: var(--gold); }
+.chest > summary:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
+.chest .k { font-weight: 700; color: var(--amber); }
+.chest .s { color: var(--muted); font: .88rem var(--ui); min-width: 0; overflow-wrap: anywhere; flex: 1 1 260px; }
+.chest ul { margin: 0; padding: 4px 14px 14px; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 3px 18px; font: .9rem var(--ui); }
+.chest li { display: flex; justify-content: space-between; align-items: center; gap: 10px; border-top: 1px solid rgba(255, 214, 160, .07); padding-top: 3px; }
+.note { color: var(--muted); font: .88rem var(--ui); max-width: 65ch; margin: 0; }
 
 @media (max-width: 640px) {
   .ledger-head, .item > summary { grid-template-columns: minmax(0, 1fr) 72px 44px; }
   .ledger-head .c, .item .cat { display: none; }
+  .where { padding-left: 14px; }
 }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
 </style>
@@ -103,7 +128,7 @@ h2 { font-size: 1.35rem; }
 <body>
 
 <div class="wrap">
-  <header>
+  <header class="panel">
     <a class="up" href="../">← Mundos de Valheim</a>
     <h1>Arcón de Pancheim</h1>
     <div class="meta" id="meta"></div>
@@ -111,12 +136,12 @@ h2 { font-size: 1.35rem; }
 
   <section aria-labelledby="h-led" style="display:grid;gap:12px">
     <h2 id="h-led">Todo lo guardado</h2>
-    <div class="controls">
+    <div class="controls panel">
       <input class="search" id="q" type="search" placeholder="Buscar: plata, trofeo, hidromiel…" aria-label="Buscar item">
       <div class="row" id="cats"><span class="lbl">Tipo</span></div>
       <div class="row" id="scope"><span class="lbl">Dónde</span></div>
     </div>
-    <div class="ledger">
+    <div class="ledger panel">
       <div class="ledger-head">
         <button data-sort="name">Item</button><button class="c" data-sort="cat">Tipo</button><button class="r" data-sort="total">Total</button><button class="r" data-sort="places">Lugares</button>
       </div>
@@ -223,7 +248,7 @@ document.getElementById("q").addEventListener("input", e => { state.q = e.target
 
 document.getElementById("stations").innerHTML = D.stations
   .sort((a, b) => a.kind.localeCompare(b.kind, "es"))
-  .map(s => `<div class="st"><span class="k">${s.kind}</span><span class="d${s.detail === "Vacío" ? "" : " active"}">${s.detail}</span><span class="coord">${s.x}, ${s.z}</span></div>`).join("");
+  .map(s => `<div class="st panel"><span class="k">${s.kind}</span><span class="d${s.detail === "Vacío" ? "" : " active"}">${s.detail}</span><span class="coord">${s.x}, ${s.z}</span></div>`).join("");
 
 const order = { base: 0, afuera: 1, tumbas: 2 };
 document.getElementById("chests").innerHTML = [...D.containers]
@@ -232,7 +257,7 @@ document.getElementById("chests").innerHTML = [...D.containers]
     const agg = new Map(); for (const [p, s, q] of c.items) { const k = p + "|" + q; agg.set(k, (agg.get(k) || 0) + s); }
     const list = [...agg.entries()].map(([k, n]) => { const [p, q] = k.split("|"); return [icon(p, "sm") + `<span>${N(p)}${q > 1 ? ` (nv. ${q})` : ""}</span>`, n, N(p)]; }).sort((a, b) => b[1] - a[1]);
     const label = { base: "Base", afuera: "Afuera", tumbas: "Tumba" }[where(c)];
-    return `<details class="chest"><summary><span class="k">${c.kind}</span><span class="coord">${label} · ${c.x}, ${c.z}</span>` +
+    return `<details class="chest panel"><summary><span class="k">${c.kind}</span><span class="coord">${label} · ${c.x}, ${c.z}</span>` +
       `<span class="s">${list.slice(0, 4).map(x => x[2]).join(", ")}${list.length > 4 ? ` y ${list.length - 4} más` : ""}</span></summary>` +
       `<ul>${list.map(([n, k]) => `<li><span class="name" style="display:flex;align-items:center;gap:8px;min-width:0">${n}</span><span class="num">${fmt(k)}</span></li>`).join("")}</ul></details>`;
   }).join("");
