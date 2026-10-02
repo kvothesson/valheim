@@ -15,6 +15,18 @@ import sys
 from datetime import datetime, timezone
 
 
+def list_files(ftp):
+    """Nombres de archivos de la carpeta actual. El FTP de G-Portal no implementa
+    NLST, asi que se prueba MLSD y despues LIST (formato ls: el nombre va al final)."""
+    try:
+        return [n for n, facts in ftp.mlsd() if facts.get("type") == "file"]
+    except ftplib.error_perm:
+        pass
+    lines = []
+    ftp.retrlines("LIST", lines.append)
+    return [l.split(None, 8)[-1] for l in lines if l and not l.startswith(("d", "total"))]
+
+
 def main(dest):
     missing = [k for k in ("FTP_HOST", "FTP_USER", "FTP_PASS") if not os.environ.get(k)]
     if missing:
@@ -29,7 +41,7 @@ def main(dest):
         ftp.prot_p()
     ftp.cwd(remote)
     os.makedirs(dest, exist_ok=True)
-    names = [n for n in ftp.nlst() if n not in (".", "..")]
+    names = list_files(ftp)
     # Bajamos solo los archivos del guardado actual: los _main del numero mas alto
     # y todos los .chunk (cada coordenada tiene un solo archivo vigente).
     mains = [n for n in names if n.startswith("_main.")]
