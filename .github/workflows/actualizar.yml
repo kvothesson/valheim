@@ -26,12 +26,14 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - id: pages
+        uses: actions/configure-pages@v5
       # En las corridas programadas, si el servidor no guardó desde la última vez, no se republica.
       # A mano (Run workflow) o al subir cambios de código se arma siempre.
       - name: Ver qué guardado está publicado
         id: pub
         if: github.event_name == 'schedule'
-        run: echo "save=$(curl -fsL https://kvothesson.github.io/valheim/pancheim/save.txt || true)" >> "$GITHUB_OUTPUT"
+        run: echo "save=$(curl -fsL '${{ steps.pages.outputs.base_url }}/save.txt' || true)" >> "$GITHUB_OUTPUT"
       - name: Bajar el mundo desde G-Portal
         id: fetch
         env:
@@ -52,11 +54,7 @@ jobs:
           restore-keys: iconos-
       - name: Armar la pagina
         if: steps.fetch.outputs.skip != 'true'
-        run: |
-          python arcon/build.py world site/pancheim/index.html
-          cp index.html site/index.html
-      - uses: actions/configure-pages@v5
-        if: steps.fetch.outputs.skip != 'true'
+        run: python arcon/build.py world site/index.html
       - uses: actions/upload-pages-artifact@v3
         if: steps.fetch.outputs.skip != 'true'
         with:

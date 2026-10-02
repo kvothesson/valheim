@@ -1,13 +1,4 @@
-# Valheim
-
-Páginas de nuestros mundos de Valheim, una carpeta por mundo:
-
-| Dirección | Qué es |
-|---|---|
-| `kvothesson.com/valheim/` | lista de mundos |
-| `kvothesson.com/valheim/pancheim/` | Arcón de Pancheim: el inventario del mundo |
-
-## Arcón de Pancheim
+# Arcón de Pancheim
 
 Página con todo lo guardado en los cofres, vehículos y tumbas del mundo de
 Valheim `pancheim`, más el estado de fermentadores, fundiciones y hornos. Se
@@ -36,12 +27,12 @@ en el servidor.
 3. **Actions → Actualizar inventario → Run workflow** para la primera
    corrida. Si falla en "Bajar el mundo", revisá los secretos y la carpeta.
 
-La página queda en `https://kvothesson.com/valheim/pancheim/` (GitHub Pages usa el dominio propio de kvothesson.github.io).
+La página queda en la dirección de GitHub Pages del repositorio (ver Settings → Pages).
 
 ## Cosas a saber
 
 - Si el servidor no guardó desde la última corrida, la corrida programada termina
-  sin republicar (compara con `pancheim/save.txt`). A mano o al subir código se
+  sin republicar (compara con `save.txt` de la página publicada). A mano o al subir código se
   arma siempre.
 - GitHub pausa las tareas programadas si el repositorio pasa 60 días sin
   actividad. Se reactivan desde la pestaña Actions.
@@ -51,7 +42,7 @@ La página queda en `https://kvothesson.com/valheim/pancheim/` (GitHub Pages usa
 - Probar en local con una carpeta de mundo ya bajada:
 
   ```
-  python arcon/build.py <carpeta_del_mundo> site/pancheim/index.html
+  python arcon/build.py <carpeta_del_mundo> site/index.html
   ```
 
 ## De dónde sale cada cosa
