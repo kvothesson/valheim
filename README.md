@@ -1,4 +1,13 @@
-# Arcón de Pancheim
+# Valheim
+
+Páginas de nuestros mundos de Valheim, una carpeta por mundo:
+
+| Dirección | Qué es |
+|---|---|
+| `kvothesson.github.io/valheim/` | lista de mundos |
+| `kvothesson.github.io/valheim/pancheim/` | Arcón de Pancheim: el inventario del mundo |
+
+## Arcón de Pancheim
 
 Página con todo lo guardado en los cofres, vehículos y tumbas del mundo de
 Valheim `pancheim`, más el estado de fermentadores, fundiciones y hornos. Se
@@ -27,7 +36,7 @@ en el servidor.
 3. **Actions → Actualizar inventario → Run workflow** para la primera
    corrida. Si falla en "Bajar el mundo", revisá los secretos y la carpeta.
 
-La página queda en `https://<usuario>.github.io/arcon-pancheim/`.
+La página queda en `https://kvothesson.github.io/valheim/pancheim/`.
 
 ## Cosas a saber
 
@@ -39,7 +48,7 @@ La página queda en `https://<usuario>.github.io/arcon-pancheim/`.
 - Probar en local con una carpeta de mundo ya bajada:
 
   ```
-  python arcon/build.py <carpeta_del_mundo> site/index.html
+  python arcon/build.py <carpeta_del_mundo> site/pancheim/index.html
   ```
 
 ## De dónde sale cada cosa

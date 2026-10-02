@@ -34,7 +34,9 @@ jobs:
           FTP_WORLD_DIR: ${{ secrets.FTP_WORLD_DIR }}
         run: python arcon/fetch_ftp.py world
       - name: Armar la pagina
-        run: python arcon/build.py world site/index.html
+        run: |
+          python arcon/build.py world site/pancheim/index.html
+          cp index.html site/index.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
