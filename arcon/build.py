@@ -7,7 +7,9 @@ import glob
 import json
 import os
 import re
+import shutil
 import sys
+import urllib.request
 from datetime import datetime, timedelta, timezone
 
 from zdo import parse_items, stable_hash, world_objects
@@ -74,13 +76,41 @@ def build(world_dir):
             "names": {p: NAMES.get(p, {"es": p, "cat": "Otros"}) for p in sorted(used)}}
 
 
+ICON_URL = "https://valheim-modding.github.io/Jotunn/Documentation/images/items/{}.png"
+ICON_CACHE = os.environ.get("ICON_CACHE", os.path.join(ROOT, ".icons"))
+
+
+def copy_icons(prefabs, dest):
+    """Copia a dest el icono de cada item. Los que faltan en la cache se bajan de
+    la documentacion de Jotunn; si uno no existe, la pagina muestra el item sin icono."""
+    os.makedirs(ICON_CACHE, exist_ok=True)
+    os.makedirs(dest, exist_ok=True)
+    have = []
+    for p in prefabs:
+        cached = os.path.join(ICON_CACHE, p + ".png")
+        if not os.path.exists(cached):
+            try:
+                with urllib.request.urlopen(ICON_URL.format(p), timeout=20) as r:
+                    body = r.read()
+                if body[:8] == b"\x89PNG\r\n\x1a\n":
+                    open(cached, "wb").write(body)
+            except OSError:
+                continue
+        if os.path.exists(cached):
+            shutil.copyfile(cached, os.path.join(dest, p + ".png"))
+            have.append(p)
+    return have
+
+
 def main(world_dir, out_path):
     if not glob.glob(os.path.join(world_dir, "*.chunk")):
         sys.exit(f"No hay archivos .chunk en {world_dir}: no publico una pagina vacia.")
     data = build(world_dir)
+    out_dir = os.path.dirname(os.path.abspath(out_path))
+    data["icons"] = copy_icons(data["names"], os.path.join(out_dir, "icons"))
     template = open(os.path.join(ROOT, "template.html"), encoding="utf-8").read()
     payload = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-    os.makedirs(os.path.dirname(os.path.abspath(out_path)), exist_ok=True)
+    os.makedirs(out_dir, exist_ok=True)
     open(out_path, "w", encoding="utf-8").write(template.replace("__DATA__", payload))
     print(f"{len(data['containers'])} contenedores, {len(data['stations'])} estaciones, "
           f"{len(data['names'])} items distintos; guardado {data['saved']} -> {out_path}")

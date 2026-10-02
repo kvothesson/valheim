@@ -57,5 +57,7 @@ La página queda en `https://kvothesson.com/valheim/pancheim/` (GitHub Pages usa
   version 41).
 - `data/hashes.json` traduce los identificadores del guardado a nombres de
   prefab; sale de la lista de prefabs de la documentación de Jötunn.
+- Los íconos de los items se bajan de la documentación de Jötunn al armar la
+  página y quedan en caché entre corridas.
 - `data/names.json` tiene el nombre en español y la categoría de cada item,
   tal como los muestra el juego.
