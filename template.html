@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Arcón de Pancheim</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500;700&family=Alegreya+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one ledger column — filters, item ledger with expandable locations, then stations and chests. */
+:root {
+  --bg: #e9eef0;        /* fjord mist */
+  --panel: #f7f9fa;
+  --ink: #1d2830;
+  --muted: #5b6b75;
+  --line: #cdd7dc;
+  --accent: #96641f;    /* forged bronze */
+  --accent-soft: #f1e4cf;
+  --warn: #a8442f;
+  --ok: #3f7a52;
+  --display: "Alegreya SC", "Palatino Linotype", Georgia, serif;
+  --body: "Alegreya Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12181c; --panel: #1a2228; --ink: #e2e8eb; --muted: #93a3ac; --line: #2c3840;
+  --accent: #d6a45a; --accent-soft: #3a2e1c; --warn: #e07a62; --ok: #7cc192; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #12181c; --panel: #1a2228; --ink: #e2e8eb; --muted: #93a3ac; --line: #2c3840;
+  --accent: #d6a45a; --accent-soft: #3a2e1c; --warn: #e07a62; --ok: #7cc192; color-scheme: dark }
+
+html { color-scheme: light; }
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 var(--body); }
+.wrap { max-width: 1040px; margin: 0 auto; padding-inline: 16px; padding-block: 28px 64px; display: grid; gap: 28px; }
+h1, h2 { font-family: var(--display); font-weight: 700; margin: 0; text-wrap: balance; letter-spacing: .01em; }
+h1 { font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1.05; }
+h2 { font-size: 1.35rem; }
+.meta { color: var(--muted); font-size: .95rem; display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 8px; }
+.meta b { color: var(--ink); font-weight: 600; }
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+
+.controls { display: grid; gap: 12px; }
+.search { width: 100%; box-sizing: border-box; font: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--ink); }
+.search:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chip { font: 500 .88rem var(--body); border: 1px solid var(--line); background: var(--panel); color: var(--ink); border-radius: 999px; padding: 5px 12px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--ink); }
+.chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.lbl { font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-right: 4px; }
+
+.ledger { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.ledger-head, .item > summary { display: grid; grid-template-columns: minmax(0, 1fr) 150px 88px 70px; gap: 12px; align-items: baseline; padding: 9px 14px; }
+.ledger-head { font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); border-bottom: 1px solid var(--line); }
+.ledger-head button { all: unset; cursor: pointer; }
+.ledger-head button:focus-visible { outline: 2px solid var(--accent); }
+.ledger-head .r, .item .r { text-align: right; }
+.item { border-bottom: 1px solid var(--line); }
+.item:last-child { border-bottom: 0; }
+.item > summary { cursor: pointer; list-style: none; }
+.item > summary::-webkit-details-marker { display: none; }
+.item > summary:hover { background: var(--accent-soft); }
+.item > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.item .name { font-weight: 500; overflow-wrap: anywhere; }
+.item .q { color: var(--muted); font-size: .85rem; }
+.cat { color: var(--muted); font-size: .9rem; }
+.where { padding: 2px 14px 12px 28px; display: grid; gap: 4px; font-size: .92rem; }
+.where div { display: flex; justify-content: space-between; gap: 12px; border-top: 1px dashed var(--line); padding-top: 4px; }
+.where span:first-child { min-width: 0; overflow-wrap: anywhere; }
+.empty { padding: 18px 14px; color: var(--muted); }
+
+.stations { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+.st { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; display: grid; gap: 2px; }
+.st .k { font-weight: 600; }
+.st .d { color: var(--muted); font-size: .92rem; }
+.st .d.active { color: var(--ok); }
+.coord { font-family: var(--mono); font-size: .8rem; color: var(--muted); }
+
+.chests { display: grid; gap: 8px; }
+.chest { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; }
+.chest > summary { cursor: pointer; padding: 9px 14px; display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; }
+.chest > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.chest .k { font-weight: 600; }
+.chest .s { color: var(--muted); font-size: .9rem; min-width: 0; overflow-wrap: anywhere; flex: 1 1 260px; }
+.chest ul { margin: 0; padding: 0 14px 12px; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 2px 18px; font-size: .92rem; }
+.chest li { display: flex; justify-content: space-between; gap: 10px; border-top: 1px dashed var(--line); padding-top: 3px; }
+.note { color: var(--muted); font-size: .9rem; max-width: 65ch; }
+
+@media (max-width: 640px) {
+  .ledger-head, .item > summary { grid-template-columns: minmax(0, 1fr) 72px 44px; }
+  .ledger-head .c, .item .cat { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <h1>Arcón de Pancheim</h1>
+    <div class="meta" id="meta"></div>
+  </header>
+
+  <section aria-labelledby="h-led" style="display:grid;gap:12px">
+    <h2 id="h-led">Todo lo guardado</h2>
+    <div class="controls">
+      <input class="search" id="q" type="search" placeholder="Buscar: plata, trofeo, hidromiel…" aria-label="Buscar item">
+      <div class="row" id="cats"><span class="lbl">Tipo</span></div>
+      <div class="row" id="scope"><span class="lbl">Dónde</span></div>
+    </div>
+    <div class="ledger">
+      <div class="ledger-head">
+        <button data-sort="name">Item</button><button class="c" data-sort="cat">Tipo</button><button class="r" data-sort="total">Total</button><button class="r" data-sort="places">Lugares</button>
+      </div>
+      <div id="list"></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-st" style="display:grid;gap:10px">
+    <h2 id="h-st">Estaciones</h2>
+    <div class="stations" id="stations"></div>
+  </section>
+
+  <section aria-labelledby="h-ch" style="display:grid;gap:10px">
+    <h2 id="h-ch">Cofres uno por uno</h2>
+    <div class="chests" id="chests"></div>
+    <p class="note">Coordenadas del mapa (x, z). “Base” es todo lo que está a menos de 150 m de la base principal. No incluye lo que cada uno lleva encima, ni los trofeos colgados en soportes.</p>
+  </section>
+</div>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>
+const D = JSON.parse(document.getElementById("data").textContent);
+const N = p => (D.names[p] && D.names[p].es) || p;
+const C = p => (D.names[p] && D.names[p].cat) || "Otros";
+const fmt = n => n.toLocaleString("es-AR");
+const where = c => c.kind === "Tumba" ? "tumbas" : (c.base ? "base" : "afuera");
+const place = c => `${c.kind} · ${c.x}, ${c.z}`;
+
+const saved = new Date(D.saved);
+const TZ = { timeZone: "America/Argentina/Buenos_Aires" };
+const when = d => `${d.toLocaleDateString("es-AR", {...TZ, day: "numeric", month: "long"})}, ${d.toLocaleTimeString("es-AR", {...TZ, hour: "2-digit", minute: "2-digit"})}`;
+document.getElementById("meta").innerHTML =
+  `<span>Guardado del servidor: <b>${when(saved)}</b></span>` +
+  `<span>Actualizado: ${when(new Date(D.built))}</span>` +
+  `<span><b>${D.containers.filter(c => c.kind !== "Tumba").length}</b> cofres y vehículos</span>` +
+  `<span><b>${D.containers.filter(c => c.kind === "Tumba").length}</b> tumbas</span>`;
+
+let state = { q: "", cat: "Todo", scope: new Set(["base", "afuera"]), sort: "total", dir: -1 };
+try { const s = JSON.parse(localStorage.getItem("arcon-state") || "null"); if (s) { state.cat = s.cat || "Todo"; state.scope = new Set(s.scope || ["base", "afuera"]); } } catch (e) {}
+const save = () => { try { localStorage.setItem("arcon-state", JSON.stringify({ cat: state.cat, scope: [...state.scope] })); } catch (e) {} };
+
+function aggregate() {
+  const m = new Map();
+  for (const c of D.containers) {
+    if (!state.scope.has(where(c))) continue;
+    for (const [p, s, q] of c.items) {
+      let e = m.get(p);
+      if (!e) m.set(p, e = { p, total: 0, at: new Map(), maxq: 1 });
+      e.total += s; e.maxq = Math.max(e.maxq, q);
+      const k = place(c); e.at.set(k, (e.at.get(k) || 0) + s);
+    }
+  }
+  return m;
+}
+
+
+const CATS = ["Todo", "Materiales", "Comida y pociones", "Trofeos", "Armadura", "Armas", "Escudos", "Flechas", "Herramientas", "Accesorios", "Otros"];
+const SCOPES = [["base", "Base"], ["afuera", "Afuera"], ["tumbas", "Tumbas"]];
+function renderChips() {
+  const present = new Set(Object.keys(D.names).map(C));
+  const cats = document.getElementById("cats");
+  cats.querySelectorAll(".chip").forEach(x => x.remove());
+  for (const c of CATS.filter(c => c === "Todo" || present.has(c))) {
+    const b = document.createElement("button"); b.className = "chip"; b.textContent = c;
+    b.setAttribute("aria-pressed", String(state.cat === c));
+    b.onclick = () => { state.cat = c; save(); renderChips(); renderList(); };
+    cats.appendChild(b);
+  }
+  const sc = document.getElementById("scope");
+  sc.querySelectorAll(".chip").forEach(x => x.remove());
+  for (const [k, l] of SCOPES) {
+    const b = document.createElement("button"); b.className = "chip"; b.textContent = l;
+    b.setAttribute("aria-pressed", String(state.scope.has(k)));
+    b.onclick = () => { state.scope.has(k) ? state.scope.delete(k) : state.scope.add(k); save(); renderChips(); renderList(); };
+    sc.appendChild(b);
+  }
+}
+
+const norm = s => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+function renderList() {
+  const q = norm(state.q.trim());
+  let rows = [...aggregate().values()].filter(e =>
+    (state.cat === "Todo" || C(e.p) === state.cat) && (!q || norm(N(e.p)).includes(q) || norm(e.p).includes(q)));
+  const key = { name: e => N(e.p), cat: e => C(e.p), total: e => e.total, places: e => e.at.size }[state.sort];
+  rows.sort((a, b) => { const x = key(a), y = key(b); return (typeof x === "string" ? x.localeCompare(y, "es") : x - y) * state.dir || N(a.p).localeCompare(N(b.p), "es"); });
+  const el = document.getElementById("list");
+  if (!rows.length) { el.innerHTML = `<div class="empty">No hay nada que coincida. Probá otra palabra o activá más lugares en “Dónde”.</div>`; return; }
+  el.innerHTML = rows.map(e => {
+    const at = [...e.at.entries()].sort((a, b) => b[1] - a[1]);
+    return `<details class="item"><summary><span class="name">${N(e.p)}${e.maxq > 1 ? ` <span class="q">hasta nivel ${e.maxq}</span>` : ""}</span>` +
+      `<span class="cat">${C(e.p)}</span><span class="r num">${fmt(e.total)}</span><span class="r num">${e.at.size}</span></summary>` +
+      `<div class="where">${at.map(([k, n]) => `<div><span>${k}</span><span class="num">${fmt(n)}</span></div>`).join("")}</div></details>`;
+  }).join("");
+}
+
+document.querySelectorAll(".ledger-head button").forEach(b => b.onclick = () => {
+  const s = b.dataset.sort; state.dir = state.sort === s ? -state.dir : (s === "name" || s === "cat" ? 1 : -1); state.sort = s; renderList();
+});
+document.getElementById("q").addEventListener("input", e => { state.q = e.target.value; renderList(); });
+
+document.getElementById("stations").innerHTML = D.stations
+  .sort((a, b) => a.kind.localeCompare(b.kind, "es"))
+  .map(s => `<div class="st"><span class="k">${s.kind}</span><span class="d${s.detail === "Vacío" ? "" : " active"}">${s.detail}</span><span class="coord">${s.x}, ${s.z}</span></div>`).join("");
+
+const order = { base: 0, afuera: 1, tumbas: 2 };
+document.getElementById("chests").innerHTML = [...D.containers]
+  .sort((a, b) => order[where(a)] - order[where(b)] || a.x - b.x || a.z - b.z)
+  .map(c => {
+    const agg = new Map(); for (const [p, s, q] of c.items) { const k = p + "|" + q; agg.set(k, (agg.get(k) || 0) + s); }
+    const list = [...agg.entries()].map(([k, n]) => { const [p, q] = k.split("|"); return [N(p) + (q > 1 ? ` (nv. ${q})` : ""), n]; }).sort((a, b) => b[1] - a[1]);
+    const label = { base: "Base", afuera: "Afuera", tumbas: "Tumba" }[where(c)];
+    return `<details class="chest"><summary><span class="k">${c.kind}</span><span class="coord">${label} · ${c.x}, ${c.z}</span>` +
+      `<span class="s">${list.slice(0, 4).map(x => x[0]).join(", ")}${list.length > 4 ? ` y ${list.length - 4} más` : ""}</span></summary>` +
+      `<ul>${list.map(([n, k]) => `<li><span>${n}</span><span class="num">${fmt(k)}</span></li>`).join("")}</ul></details>`;
+  }).join("");
+
+renderChips(); renderList();
+</script>
+
+</body>
+</html>

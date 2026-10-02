@@ -1,0 +1,4922 @@
+{
+"Acorn": {
+"cat": "Materiales",
+"es": "Bellotas"
+},
+"Amber": {
+"cat": "Materiales",
+"es": "Ámbar"
+},
+"AmberPearl": {
+"cat": "Materiales",
+"es": "Perla de ámbar"
+},
+"AncientCoin": {
+"cat": "Materiales",
+"es": "Moneda antigua"
+},
+"AncientGemstoneBlack": {
+"cat": "Materiales",
+"es": "Draumyx"
+},
+"AncientGemstoneGreen": {
+"cat": "Materiales",
+"es": "Grimvarn"
+},
+"AncientGemstoneOrange": {
+"cat": "Materiales",
+"es": "Solryth"
+},
+"AncientGemstonePurple": {
+"cat": "Materiales",
+"es": "Veydris"
+},
+"AncientSeed": {
+"cat": "Otros",
+"es": "Semilla milenaria"
+},
+"ArmorAshlandsMediumChest": {
+"cat": "Armadura",
+"es": "Coraza de Ask"
+},
+"ArmorAshlandsMediumlegs": {
+"cat": "Armadura",
+"es": "Pantalones de Ask"
+},
+"ArmorBerserkerChest": {
+"cat": "Armadura",
+"es": "Patrones de Bjorn"
+},
+"ArmorBerserkerLegs": {
+"cat": "Armadura",
+"es": "Taparrabo de Bjorn"
+},
+"ArmorBerserkerUndeadChest": {
+"cat": "Armadura",
+"es": "Torso de hueso vil"
+},
+"ArmorBerserkerUndeadLegs": {
+"cat": "Armadura",
+"es": "Faldón de hueso vil"
+},
+"ArmorBronzeChest": {
+"cat": "Armadura",
+"es": "Coraza de placas de bronce"
+},
+"ArmorBronzeLegs": {
+"cat": "Armadura",
+"es": "Mallas de placas de bronce"
+},
+"ArmorCarapaceChest": {
+"cat": "Armadura",
+"es": "Coraza de Caparazón"
+},
+"ArmorCarapaceLegs": {
+"cat": "Armadura",
+"es": "Rodilleras de Caparazón"
+},
+"ArmorDeepNorthHeavyChest": {
+"cat": "Armadura",
+"es": "Coraza del Protector"
+},
+"ArmorDeepNorthHeavylegs": {
+"cat": "Armadura",
+"es": "Pantalones del Protector"
+},
+"ArmorDeepNorthMageChest": {
+"cat": "Armadura",
+"es": "Túnica del Invocador"
+},
+"ArmorDeepNorthMagelegs": {
+"cat": "Armadura",
+"es": "Pantalones del Invocador"
+},
+"ArmorDeepNorthMediumChest": {
+"cat": "Armadura",
+"es": "Peto de la Vanguardia"
+},
+"ArmorDeepNorthMediumlegs": {
+"cat": "Armadura",
+"es": "Pantalones de la Vanguardia"
+},
+"ArmorDress1": {
+"cat": "Armadura",
+"es": "Vestido sencillo marrón"
+},
+"ArmorDress10": {
+"cat": "Armadura",
+"es": "Vestido sencillo natural"
+},
+"ArmorDress2": {
+"cat": "Armadura",
+"es": "Vestido marrón con manto"
+},
+"ArmorDress3": {
+"cat": "Armadura",
+"es": "Vestido marrón con abalorios"
+},
+"ArmorDress4": {
+"cat": "Armadura",
+"es": "Vestido sencillo azul"
+},
+"ArmorDress5": {
+"cat": "Armadura",
+"es": "Vestido azul con manto"
+},
+"ArmorDress6": {
+"cat": "Armadura",
+"es": "Vestido azul con abalorios"
+},
+"ArmorDress7": {
+"cat": "Armadura",
+"es": "Vestido sencillo amarillo"
+},
+"ArmorDress8": {
+"cat": "Armadura",
+"es": "Vestido amarillo con manto"
+},
+"ArmorDress9": {
+"cat": "Armadura",
+"es": "Vestido amarillo con abalorios"
+},
+"ArmorFenringChest": {
+"cat": "Armadura",
+"es": "Pelaje de Fenris"
+},
+"ArmorFenringLegs": {
+"cat": "Armadura",
+"es": "Mallas de Fenris"
+},
+"ArmorFlametalChest": {
+"cat": "Armadura",
+"es": "Coraza de llametal"
+},
+"ArmorFlametalLegs": {
+"cat": "Armadura",
+"es": "Grebas de llametal"
+},
+"ArmorGoldHeavyChestUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: coraza del Protector"
+},
+"ArmorGoldHeavyHelmetUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: yelmo del Protector"
+},
+"ArmorGoldHeavyLegsUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: pantalones del Protector"
+},
+"ArmorGoldMageChestUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: túnica del Invocador"
+},
+"ArmorGoldMageHelmetUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: tocado del Invocador"
+},
+"ArmorGoldMageLegsUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: pantalones del Invocador"
+},
+"ArmorGoldMediumChestUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: peto de la Vanguardia"
+},
+"ArmorGoldMediumHelmetUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: capucha de la Vanguardia"
+},
+"ArmorGoldMediumLegsUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: pantalones de la Vanguardia"
+},
+"ArmorHarvester1": {
+"cat": "Armadura",
+"es": "Túnica de cosecha"
+},
+"ArmorHarvester2": {
+"cat": "Armadura",
+"es": "Vestido de cosecha"
+},
+"ArmorIronChest": {
+"cat": "Armadura",
+"es": "Armadura de escamas de hierro"
+},
+"ArmorIronLegs": {
+"cat": "Armadura",
+"es": "Grebas de hierro"
+},
+"ArmorLeatherChest": {
+"cat": "Armadura",
+"es": "Túnica de cuero"
+},
+"ArmorLeatherLegs": {
+"cat": "Armadura",
+"es": "Pantalones de cuero"
+},
+"ArmorLoxChest": {
+"cat": "Armadura",
+"es": "Chaqueta de piel de lox"
+},
+"ArmorLoxLegs": {
+"cat": "Armadura",
+"es": "Pantalones de piel de lox"
+},
+"ArmorMageChest": {
+"cat": "Armadura",
+"es": "Túnica tejida en Eitr"
+},
+"ArmorMageChest_Ashlands": {
+"cat": "Armadura",
+"es": "Túnica de Embla"
+},
+"ArmorMageLegs": {
+"cat": "Armadura",
+"es": "Pantalones tejidos en Eitr"
+},
+"ArmorMageLegs_Ashlands": {
+"cat": "Armadura",
+"es": "Pantalones de Embla"
+},
+"ArmorPaddedCuirass": {
+"cat": "Armadura",
+"es": "Gambesón acolchado"
+},
+"ArmorPaddedGreaves": {
+"cat": "Armadura",
+"es": "Grebas acolchadas"
+},
+"ArmorRagsChest": {
+"cat": "Armadura",
+"es": "Túnica harapienta"
+},
+"ArmorRagsLegs": {
+"cat": "Armadura",
+"es": "Pantalones harapientos"
+},
+"ArmorRootChest": {
+"cat": "Armadura",
+"es": "Coraza de raíces"
+},
+"ArmorRootLegs": {
+"cat": "Armadura",
+"es": "Mallas de raíces"
+},
+"ArmorTrollLeatherChest": {
+"cat": "Armadura",
+"es": "Túnica de cuero de trol"
+},
+"ArmorTrollLeatherLegs": {
+"cat": "Armadura",
+"es": "Pantalones de cuero de trol"
+},
+"ArmorTunic1": {
+"cat": "Armadura",
+"es": "Túnica sencilla azul"
+},
+"ArmorTunic10": {
+"cat": "Armadura",
+"es": "Túnica sencilla natural"
+},
+"ArmorTunic2": {
+"cat": "Armadura",
+"es": "Túnica azul con capa"
+},
+"ArmorTunic3": {
+"cat": "Armadura",
+"es": "Túnica azul con abalorios"
+},
+"ArmorTunic4": {
+"cat": "Armadura",
+"es": "Túnica sencilla roja"
+},
+"ArmorTunic5": {
+"cat": "Armadura",
+"es": "Túnica roja con capa"
+},
+"ArmorTunic6": {
+"cat": "Armadura",
+"es": "Túnica roja con abalorios"
+},
+"ArmorTunic7": {
+"cat": "Armadura",
+"es": "Túnica sencilla amarilla"
+},
+"ArmorTunic8": {
+"cat": "Armadura",
+"es": "Túnica amarilla con capa"
+},
+"ArmorTunic9": {
+"cat": "Armadura",
+"es": "Túnica amarilla con abalorios"
+},
+"ArmorWolfChest": {
+"cat": "Armadura",
+"es": "Pechera de lobo"
+},
+"ArmorWolfLegs": {
+"cat": "Armadura",
+"es": "Pantalones de lobo"
+},
+"ArrowBloodGold": {
+"cat": "Flechas",
+"es": "Flecha de oro sanguino"
+},
+"ArrowBronze": {
+"cat": "Flechas",
+"es": "Flecha de bronce"
+},
+"ArrowCarapace": {
+"cat": "Flechas",
+"es": "Flecha de caparazón"
+},
+"ArrowCharred": {
+"cat": "Flechas",
+"es": "Flecha carbonizada"
+},
+"ArrowFire": {
+"cat": "Flechas",
+"es": "Flecha ígnea"
+},
+"ArrowFlint": {
+"cat": "Flechas",
+"es": "Flecha de sílex"
+},
+"ArrowFrost": {
+"cat": "Flechas",
+"es": "Flecha gélida"
+},
+"ArrowIron": {
+"cat": "Flechas",
+"es": "Flecha de hierro"
+},
+"ArrowNeedle": {
+"cat": "Flechas",
+"es": "Flecha de aguja"
+},
+"ArrowObsidian": {
+"cat": "Flechas",
+"es": "Flecha de obsidiana"
+},
+"ArrowPoison": {
+"cat": "Flechas",
+"es": "Flecha ponzoñosa"
+},
+"ArrowSilver": {
+"cat": "Flechas",
+"es": "Flecha de plata"
+},
+"ArrowWood": {
+"cat": "Flechas",
+"es": "Flecha de madera"
+},
+"AskBladder": {
+"cat": "Materiales",
+"es": "Vejiga de cenicerdo"
+},
+"AskHide": {
+"cat": "Materiales",
+"es": "Pellejo de cenicerdo"
+},
+"AsksvinCarrionNeck": {
+"cat": "Materiales",
+"es": "Cuello de cenicerdo"
+},
+"AsksvinCarrionPelvic": {
+"cat": "Materiales",
+"es": "Pelvis de cenicerdo"
+},
+"AsksvinCarrionRibcage": {
+"cat": "Materiales",
+"es": "Caja torácica de cenicerdo"
+},
+"AsksvinCarrionSkull": {
+"cat": "Materiales",
+"es": "Cráneo de cenicerdo"
+},
+"AsksvinEgg": {
+"cat": "Otros",
+"es": "Huevo de cenicerdo"
+},
+"AsksvinMeat": {
+"cat": "Materiales",
+"es": "Cola de cenicerdo"
+},
+"AtgeirBlackmetal": {
+"cat": "Armas",
+"es": "Atgeir de metal negro"
+},
+"AtgeirBronze": {
+"cat": "Armas",
+"es": "Atgeir de bronce"
+},
+"AtgeirGold": {
+"cat": "Armas",
+"es": "Atgeir nord"
+},
+"AtgeirGoldUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: atgeir nord"
+},
+"AtgeirGold_BloodLightning": {
+"cat": "Armas",
+"es": "Atgeir de sangre de trueno"
+},
+"AtgeirGold_FrostFire": {
+"cat": "Armas",
+"es": "Atgeir de fuego gélido"
+},
+"AtgeirHimminAfl": {
+"cat": "Armas",
+"es": "Himmin afl"
+},
+"AtgeirIron": {
+"cat": "Armas",
+"es": "Atgeir de hierro"
+},
+"AtgeirWood": {
+"cat": "Armas",
+"es": "Atgeir de madera"
+},
+"Axe1h_JotunWarrior": {
+"cat": "Armas",
+"es": "Club"
+},
+"Axe2h_JotunWarrior": {
+"cat": "Armas",
+"es": "Club"
+},
+"AxeBerzerkr": {
+"cat": "Armas",
+"es": "Hachas berserkir"
+},
+"AxeBerzerkrBlood": {
+"cat": "Armas",
+"es": "Hachas berserkir sangrantes"
+},
+"AxeBerzerkrLightning": {
+"cat": "Armas",
+"es": "Hachas berserkir atronadoras"
+},
+"AxeBerzerkrNature": {
+"cat": "Armas",
+"es": "Hachas berserkir salvajes"
+},
+"AxeBlackMetal": {
+"cat": "Armas",
+"es": "Hacha de metal negro"
+},
+"AxeBronze": {
+"cat": "Armas",
+"es": "Hacha de bronce"
+},
+"AxeEarly": {
+"cat": "Armas",
+"es": "Hachas antiguas"
+},
+"AxeFlint": {
+"cat": "Armas",
+"es": "Hacha de sílex"
+},
+"AxeGold": {
+"cat": "Armas",
+"es": "Hacha nord"
+},
+"AxeGoldUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: hacha nord"
+},
+"AxeGold_BloodLightning": {
+"cat": "Armas",
+"es": "Hacha de sangre de trueno"
+},
+"AxeGold_FrostFire": {
+"cat": "Armas",
+"es": "Hacha de fuego gélido"
+},
+"AxeHead1": {
+"cat": "Materiales",
+"es": "Cabeza de hacha curiosa"
+},
+"AxeHead2": {
+"cat": "Materiales",
+"es": "Cabeza de hacha misteriosa"
+},
+"AxeIron": {
+"cat": "Armas",
+"es": "Hacha de hierro"
+},
+"AxeJotunBane": {
+"cat": "Armas",
+"es": "Ruina de los Jotun"
+},
+"AxeStone": {
+"cat": "Armas",
+"es": "Hacha de piedra"
+},
+"AxeWood": {
+"cat": "Armas",
+"es": "Hacha de madera"
+},
+"BakedPoteitr": {
+"cat": "Comida y pociones",
+"es": "Poteitr al horno"
+},
+"BakedPoteitrUncooked": {
+"cat": "Materiales",
+"es": "Poteitr sin hornear"
+},
+"BarberKit": {
+"cat": "Otros",
+"es": "Kit de barbería"
+},
+"BarkaBranch": {
+"cat": "Materiales",
+"es": "Rama congelada"
+},
+"Barley": {
+"cat": "Materiales",
+"es": "Cebada"
+},
+"BarleyFlour": {
+"cat": "Otros",
+"es": "Harina de cebada"
+},
+"BarleyWine": {
+"cat": "Comida y pociones",
+"es": "Vino de cebada resistente al fuego"
+},
+"BarleyWineBase": {
+"cat": "Materiales",
+"es": "Base de vino de cebada: Resistencia al fuego"
+},
+"BarrelRings": {
+"cat": "Otros",
+"es": "Aros de barril"
+},
+"Battleaxe": {
+"cat": "Armas",
+"es": "Hacha de guerra"
+},
+"BattleaxeBlackmetal": {
+"cat": "Armas",
+"es": "Hacha de batalla de metal negro"
+},
+"BattleaxeCrystal": {
+"cat": "Armas",
+"es": "Hacha de guerra de cristal"
+},
+"BattleaxeGold": {
+"cat": "Armas",
+"es": "Gran hacha nord"
+},
+"BattleaxeGoldUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: gran hacha nord"
+},
+"BattleaxeGold_BloodLightning": {
+"cat": "Armas",
+"es": "Gran hacha de sangre de trueno"
+},
+"BattleaxeGold_FrostFire": {
+"cat": "Armas",
+"es": "Gran hacha de fuego gélido"
+},
+"BattleaxeSkullSplittur": {
+"cat": "Armas",
+"es": "Partecráneos"
+},
+"BattleaxeWood": {
+"cat": "Armas",
+"es": "Hacha de guerra de madera"
+},
+"Beard1": {
+"cat": "Otros",
+"es": "Larga 1"
+},
+"Beard10": {
+"cat": "Otros",
+"es": "Trenzada 4"
+},
+"Beard11": {
+"cat": "Otros",
+"es": "Tupida 2"
+},
+"Beard12": {
+"cat": "Otros",
+"es": "Realeza 1"
+},
+"Beard13": {
+"cat": "Otros",
+"es": "Realeza 2"
+},
+"Beard14": {
+"cat": "Otros",
+"es": "Trenzas 5"
+},
+"Beard15": {
+"cat": "Otros",
+"es": "Corto 4"
+},
+"Beard16": {
+"cat": "Otros",
+"es": "Morador de las rocas"
+},
+"Beard17": {
+"cat": "Otros",
+"es": "Pulcra"
+},
+"Beard18": {
+"cat": "Otros",
+"es": "Regia 3"
+},
+"Beard19": {
+"cat": "Otros",
+"es": "Poblada"
+},
+"Beard2": {
+"cat": "Otros",
+"es": "Larga 2"
+},
+"Beard20": {
+"cat": "Otros",
+"es": "Espinosa"
+},
+"Beard21": {
+"cat": "Otros",
+"es": "Corta 5"
+},
+"Beard22": {
+"cat": "Otros",
+"es": "Bigote"
+},
+"Beard23": {
+"cat": "Otros",
+"es": "Poblada"
+},
+"Beard24": {
+"cat": "Otros",
+"es": "Encerado"
+},
+"Beard25": {
+"cat": "Otros",
+"es": "Recortado"
+},
+"Beard26": {
+"cat": "Otros",
+"es": "Revolucionario"
+},
+"Beard3": {
+"cat": "Otros",
+"es": "Corta 1"
+},
+"Beard4": {
+"cat": "Otros",
+"es": "Corta 2"
+},
+"Beard5": {
+"cat": "Otros",
+"es": "Trenzada 1"
+},
+"Beard6": {
+"cat": "Otros",
+"es": "Trenzada 2"
+},
+"Beard7": {
+"cat": "Otros",
+"es": "Corta 3"
+},
+"Beard8": {
+"cat": "Otros",
+"es": "Tupida 1"
+},
+"Beard9": {
+"cat": "Otros",
+"es": "Trenzada 3"
+},
+"BeechSeeds": {
+"cat": "Materiales",
+"es": "Semillas de haya"
+},
+"Bell": {
+"cat": "Otros",
+"es": "Campana"
+},
+"BellFragment": {
+"cat": "Materiales",
+"es": "Fragmento de campana"
+},
+"BeltStrength": {
+"cat": "Accesorios",
+"es": "Megingjord"
+},
+"Bilebag": {
+"cat": "Materiales",
+"es": "Bolsa de bilis"
+},
+"BirchSeeds": {
+"cat": "Materiales",
+"es": "Semillas de abedul"
+},
+"BjornHide": {
+"cat": "Materiales",
+"es": "Piel de Bjorn"
+},
+"BjornMeat": {
+"cat": "Materiales",
+"es": "Carne de Bjorn"
+},
+"BjornPaw": {
+"cat": "Materiales",
+"es": "Pata de Bjorn"
+},
+"BlackCore": {
+"cat": "Materiales",
+"es": "Núcleo negro"
+},
+"BlackMarble": {
+"cat": "Materiales",
+"es": "Mármol negro"
+},
+"BlackMetal": {
+"cat": "Materiales",
+"es": "Metal negro"
+},
+"BlackMetalScrap": {
+"cat": "Materiales",
+"es": "Trozo de metal negro"
+},
+"BlackSoup": {
+"cat": "Comida y pociones",
+"es": "Sopa negra"
+},
+"Blackwood": {
+"cat": "Materiales",
+"es": "Madera de ceniza"
+},
+"BlobVial": {
+"cat": "Materiales",
+"es": "Frasco con corcho"
+},
+"BloodGoldKey": {
+"cat": "Otros",
+"es": "Llave intrincada"
+},
+"BloodPudding": {
+"cat": "Comida y pociones",
+"es": "Flan de sangre"
+},
+"Bloodbag": {
+"cat": "Materiales",
+"es": "Bolsa de sangre"
+},
+"Blueberries": {
+"cat": "Comida y pociones",
+"es": "Arándanos"
+},
+"BoarJerky": {
+"cat": "Comida y pociones",
+"es": "Cecina de jabalí"
+},
+"BoltBlackmetal": {
+"cat": "Flechas",
+"es": "Virote de metal negro"
+},
+"BoltBloodGold": {
+"cat": "Flechas",
+"es": "Virote de oro sanguino"
+},
+"BoltBone": {
+"cat": "Flechas",
+"es": "Virote de hueso"
+},
+"BoltCarapace": {
+"cat": "Flechas",
+"es": "Virote de caparazón"
+},
+"BoltCharred": {
+"cat": "Flechas",
+"es": "Virote carbonizado"
+},
+"BoltIron": {
+"cat": "Flechas",
+"es": "Virote de hierro"
+},
+"BombBile": {
+"cat": "Armas",
+"es": "Bomba de bilis"
+},
+"BombBlob_Frost": {
+"cat": "Armas",
+"es": "Bombabosa: Escarcha"
+},
+"BombBlob_Lava": {
+"cat": "Armas",
+"es": "Bombabosa: Lava"
+},
+"BombBlob_Morkhalla": {
+"cat": "Armas",
+"es": "Bomba pegote: pulpa"
+},
+"BombBlob_Poison": {
+"cat": "Armas",
+"es": "Bombabosa: Veneno"
+},
+"BombBlob_PoisonElite": {
+"cat": "Armas",
+"es": "Bombabosa: Super veneno"
+},
+"BombBlob_Tar": {
+"cat": "Armas",
+"es": "Bombabosa: Brea"
+},
+"BombDynamite": {
+"cat": "Armas",
+"es": "Carga de brasas"
+},
+"BombLava": {
+"cat": "Armas",
+"es": "Bomba de basalto"
+},
+"BombOoze": {
+"cat": "Armas",
+"es": "Bomba de lodo"
+},
+"BombSiege": {
+"cat": "Materiales",
+"es": "Carga explosiva"
+},
+"BombSmoke": {
+"cat": "Armas",
+"es": "Bomba de humo"
+},
+"BoneFragments": {
+"cat": "Materiales",
+"es": "Fragmentos de hueso"
+},
+"BoneMawSerpentMeat": {
+"cat": "Materiales",
+"es": "Carne de faucesoseas"
+},
+"BonemawSerpentScale": {
+"cat": "Materiales",
+"es": "Escama de faucesoseas"
+},
+"BonemawSerpentTooth": {
+"cat": "Materiales",
+"es": "Diente de faucesoseas"
+},
+"Bow": {
+"cat": "Armas",
+"es": "Arco tosco"
+},
+"BowAshlands": {
+"cat": "Armas",
+"es": "Colmillo de las cenizas"
+},
+"BowAshlandsBlood": {
+"cat": "Armas",
+"es": "Colmillo de sangre"
+},
+"BowAshlandsRoot": {
+"cat": "Armas",
+"es": "Colmillo de raíz"
+},
+"BowAshlandsStorm": {
+"cat": "Armas",
+"es": "Colmillo de tormenta"
+},
+"BowDraugrFang": {
+"cat": "Armas",
+"es": "Colmillo de draugr"
+},
+"BowFineWood": {
+"cat": "Armas",
+"es": "Arco de madera noble"
+},
+"BowGold": {
+"cat": "Armas",
+"es": "Arco nord"
+},
+"BowGoldUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: arco nord"
+},
+"BowGold_BloodLightning": {
+"cat": "Armas",
+"es": "Arco de sangre de trueno"
+},
+"BowGold_FrostFire": {
+"cat": "Armas",
+"es": "Arco de fuego gélido"
+},
+"BowHuntsman": {
+"cat": "Armas",
+"es": "Arco de cazador"
+},
+"BowSpineSnap": {
+"cat": "Armas",
+"es": "Estallacolumnas"
+},
+"Bread": {
+"cat": "Comida y pociones",
+"es": "Pan"
+},
+"BreadDough": {
+"cat": "Materiales",
+"es": "Masa de pan"
+},
+"Bronze": {
+"cat": "Materiales",
+"es": "Bronce"
+},
+"BronzeNails": {
+"cat": "Materiales",
+"es": "Clavos de bronce"
+},
+"BronzeScrap": {
+"cat": "Materiales",
+"es": "Chatarra de bronce"
+},
+"BugMeat": {
+"cat": "Materiales",
+"es": "Carne de buscador"
+},
+"CandleWick": {
+"cat": "Materiales",
+"es": "Mecha de vela"
+},
+"CapeAsh": {
+"cat": "Armadura",
+"es": "Capa cinérea"
+},
+"CapeAsksvin": {
+"cat": "Armadura",
+"es": "Capa de cenicerdo"
+},
+"CapeDeepNorth": {
+"cat": "Armadura",
+"es": "Capa de piel de alce"
+},
+"CapeDeepNorthMage": {
+"cat": "Armadura",
+"es": "Capa del Invocador"
+},
+"CapeDeerHide": {
+"cat": "Armadura",
+"es": "Capa de piel de ciervo"
+},
+"CapeFeather": {
+"cat": "Armadura",
+"es": "Capa emplumada"
+},
+"CapeLinen": {
+"cat": "Armadura",
+"es": "Capa de lino"
+},
+"CapeLox": {
+"cat": "Armadura",
+"es": "Capa de luey"
+},
+"CapeOdin": {
+"cat": "Armadura",
+"es": "Capa de Odín"
+},
+"CapeTest": {
+"cat": "Armadura",
+"es": "CAPE TEST"
+},
+"CapeTrollHide": {
+"cat": "Armadura",
+"es": "Capa de piel de trol"
+},
+"CapeWolf": {
+"cat": "Armadura",
+"es": "Capa de pelo de lobo"
+},
+"Carapace": {
+"cat": "Materiales",
+"es": "Caparazón"
+},
+"Carrot": {
+"cat": "Comida y pociones",
+"es": "Zanahoria"
+},
+"CarrotSeeds": {
+"cat": "Materiales",
+"es": "Semillas de zanahoria"
+},
+"CarrotSoup": {
+"cat": "Comida y pociones",
+"es": "Sopa de zanahoria"
+},
+"Catapult_Ammo_BloodGold": {
+"cat": "Materiales",
+"es": "Carga de oro sanguino"
+},
+"Catapult_ammo": {
+"cat": "Materiales",
+"es": "Carga de piedras cenicientas"
+},
+"CelestialFeather": {
+"cat": "Materiales",
+"es": "Pluma celestial"
+},
+"CeramicPlate": {
+"cat": "Materiales",
+"es": "Placa de cerámica"
+},
+"Chain": {
+"cat": "Materiales",
+"es": "Cadena"
+},
+"CharcoalResin": {
+"cat": "Materiales",
+"es": "Resina de carbón"
+},
+"CharredBone": {
+"cat": "Materiales",
+"es": "Hueso carbonizado"
+},
+"CharredCogwheel": {
+"cat": "Materiales",
+"es": "Rueda dentada carbonizada"
+},
+"Charred_Breastplate": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"Charred_Helmet": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"Charred_HipCloth": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"Charred_MageCloths": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"Charredskull": {
+"cat": "Materiales",
+"es": "Cráneo carbonizado"
+},
+"ChickenEgg": {
+"cat": "Otros",
+"es": "Huevo"
+},
+"ChickenMeat": {
+"cat": "Materiales",
+"es": "Carne de pollo"
+},
+"Chitin": {
+"cat": "Materiales",
+"es": "Quitina"
+},
+"Cloudberry": {
+"cat": "Comida y pociones",
+"es": "Mora de los pantanos"
+},
+"Club": {
+"cat": "Armas",
+"es": "Garrote"
+},
+"Coal": {
+"cat": "Materiales",
+"es": "Carbón"
+},
+"Coins": {
+"cat": "Materiales",
+"es": "Monedas"
+},
+"CookedAsksvinMeat": {
+"cat": "Comida y pociones",
+"es": "Cola de cenicerdo cocida"
+},
+"CookedBjornMeat": {
+"cat": "Comida y pociones",
+"es": "Carne de bjorn cocinada"
+},
+"CookedBoneMawSerpentMeat": {
+"cat": "Comida y pociones",
+"es": "Carne de faucesoseas cocida"
+},
+"CookedBugMeat": {
+"cat": "Comida y pociones",
+"es": "Carne de buscador cocinada"
+},
+"CookedChickenMeat": {
+"cat": "Comida y pociones",
+"es": "Carne de pollo cocinada"
+},
+"CookedDeerMeat": {
+"cat": "Comida y pociones",
+"es": "Carne de ciervo cocinada"
+},
+"CookedEgg": {
+"cat": "Comida y pociones",
+"es": "Huevo cocinado"
+},
+"CookedHareMeat": {
+"cat": "Comida y pociones",
+"es": "Carne de liebre cocinada"
+},
+"CookedLoxMeat": {
+"cat": "Comida y pociones",
+"es": "Carne de luey preparada"
+},
+"CookedMeat": {
+"cat": "Comida y pociones",
+"es": "Carne de jabalí cocinada"
+},
+"CookedMooseMeat": {
+"cat": "Comida y pociones",
+"es": "Carne de alce cocinada"
+},
+"CookedSealBlubber": {
+"cat": "Comida y pociones",
+"es": "Grasa de foca cocinada"
+},
+"CookedVoltureMeat": {
+"cat": "Comida y pociones",
+"es": "Carne de buicán cocinada"
+},
+"CookedWolfMeat": {
+"cat": "Comida y pociones",
+"es": "Carne de lobo cocinada"
+},
+"Copper": {
+"cat": "Materiales",
+"es": "Cobre"
+},
+"CopperOre": {
+"cat": "Materiales",
+"es": "Mineral de cobre"
+},
+"CopperScrap": {
+"cat": "Materiales",
+"es": "Chatarra de cobre"
+},
+"CrossbowArbalest": {
+"cat": "Armas",
+"es": "Arbalesta"
+},
+"CrossbowGold": {
+"cat": "Armas",
+"es": "Ballesta nord"
+},
+"CrossbowGoldUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: ballesta nord"
+},
+"CrossbowGold_BloodLightning": {
+"cat": "Armas",
+"es": "Ballesta de sangre de trueno"
+},
+"CrossbowGold_FrostFire": {
+"cat": "Armas",
+"es": "Ballesta de fuego gélido"
+},
+"CrossbowRipper": {
+"cat": "Armas",
+"es": "Desgarradora"
+},
+"CrossbowRipperBlood": {
+"cat": "Armas",
+"es": "Desgarradora de heridas"
+},
+"CrossbowRipperLightning": {
+"cat": "Armas",
+"es": "Desgarradora de las tormentas"
+},
+"CrossbowRipperNature": {
+"cat": "Armas",
+"es": "Desgarradora de raíz"
+},
+"CrownJewel": {
+"cat": "Materiales",
+"es": "Joya de la corona"
+},
+"CryptKey": {
+"cat": "Otros",
+"es": "Llave de la cripta"
+},
+"Crystal": {
+"cat": "Materiales",
+"es": "Cristal"
+},
+"Cultivator": {
+"cat": "Herramientas",
+"es": "Cultivador"
+},
+"CuredSquirrelHamstring": {
+"cat": "Materiales",
+"es": "Tendón de jarrete de ardilla curado"
+},
+"Dandelion": {
+"cat": "Materiales",
+"es": "Diente de león"
+},
+"DeerHide": {
+"cat": "Materiales",
+"es": "Piel de ciervo"
+},
+"DeerMeat": {
+"cat": "Materiales",
+"es": "Carne de ciervo"
+},
+"DeerStew": {
+"cat": "Comida y pociones",
+"es": "Cocido de ciervo"
+},
+"Demister": {
+"cat": "Accesorios",
+"es": "Luz de Wisp"
+},
+"DragonEgg": {
+"cat": "Otros",
+"es": "Huevo de dragón"
+},
+"DragonTear": {
+"cat": "Otros",
+"es": "Lágrima dracónica"
+},
+"DvergerArbalest": {
+"cat": "Accesorios",
+"es": "Arbalesta"
+},
+"DvergerArbalest_shoot": {
+"cat": "Armas",
+"es": "Arbalesta"
+},
+"DvergerArbalest_shootAshlands": {
+"cat": "Armas",
+"es": "Arbalesta"
+},
+"DvergerArbalest_shootDeepNorth": {
+"cat": "Armas",
+"es": "Arbalesta"
+},
+"DvergerHairFemale": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"DvergerHairFemale_Redhair": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"DvergerHairMale": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"DvergerHairMale_Redbeard": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"DvergerStaffFire": {
+"cat": "Accesorios",
+"es": "Club"
+},
+"DvergerStaffHeal": {
+"cat": "Accesorios",
+"es": "Club"
+},
+"DvergerStaffIce": {
+"cat": "Accesorios",
+"es": "Club"
+},
+"DvergerStaffSupport": {
+"cat": "Accesorios",
+"es": "Club"
+},
+"DvergerSuitArbalest": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"DvergerSuitArbalest_Ashlands": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"DvergerSuitFire": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"DvergerSuitIce": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"DvergerSuitSupport": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"DvergrKey": {
+"cat": "Otros",
+"es": "Rompedor de sellos"
+},
+"DvergrKeyFragment": {
+"cat": "Materiales",
+"es": "Fragmento del rompedor de sellos"
+},
+"DvergrNeedle": {
+"cat": "Materiales",
+"es": "Extractor Dvergr"
+},
+"DyrnwynBladeFragment": {
+"cat": "Materiales",
+"es": "Dyrnwyn Blade Fragment"
+},
+"DyrnwynHiltFragment": {
+"cat": "Materiales",
+"es": "Dyrnwyn Hilt Fragment"
+},
+"DyrnwynTipFragment": {
+"cat": "Materiales",
+"es": "Dyrnwyn Tip Fragment"
+},
+"Ectoplasm": {
+"cat": "Materiales",
+"es": "Ectoplasma"
+},
+"Eitr": {
+"cat": "Materiales",
+"es": "Eitr refinado"
+},
+"ElakingHairBundle": {
+"cat": "Materiales",
+"es": "Fardo de pelo de elaking"
+},
+"Elaking_AttackLantern": {
+"cat": "Armas",
+"es": "Torch"
+},
+"ElderBark": {
+"cat": "Materiales",
+"es": "Corteza ancestral"
+},
+"Entrails": {
+"cat": "Materiales",
+"es": "Vísceras"
+},
+"Eyescream": {
+"cat": "Comida y pociones",
+"es": "Heladojo"
+},
+"FW_ArmorBronzeChest": {
+"cat": "Armadura",
+"es": "Coraza de placas de bronce"
+},
+"FW_ArmorBronzeLegs": {
+"cat": "Armadura",
+"es": "Mallas de placas de bronce"
+},
+"FW_ArmorFenringChest": {
+"cat": "Armadura",
+"es": "Pelaje de Fenris"
+},
+"FW_ArmorFenringLegs": {
+"cat": "Armadura",
+"es": "Mallas de Fenris"
+},
+"FW_ArmorMageChest": {
+"cat": "Armadura",
+"es": "Túnica tejida en Eitr"
+},
+"FW_ArmorMageChest_Ashlands": {
+"cat": "Armadura",
+"es": "Túnica de Embla"
+},
+"FW_ArmorMageLegs": {
+"cat": "Armadura",
+"es": "Pantalones tejidos en Eitr"
+},
+"FW_ArmorMageLegs_Ashlands": {
+"cat": "Armadura",
+"es": "Pantalones de Embla"
+},
+"FW_ArmorPaddedCuirass": {
+"cat": "Armadura",
+"es": "Gambesón acolchado"
+},
+"FW_ArmorPaddedGreaves": {
+"cat": "Armadura",
+"es": "Grebas acolchadas"
+},
+"FW_ArmorTrollLeatherChest": {
+"cat": "Armadura",
+"es": "Túnica de cuero de trol"
+},
+"FW_ArmorTrollLeatherLegs": {
+"cat": "Armadura",
+"es": "Pantalones de cuero de trol"
+},
+"FW_AxeBronze": {
+"cat": "Armas",
+"es": "Hacha de bronce"
+},
+"FW_BattleaxeCrystal": {
+"cat": "Armas",
+"es": "Hacha de guerra de cristal"
+},
+"FW_BowDraugrFang": {
+"cat": "Armas",
+"es": "Colmillo de draugr"
+},
+"FW_CapeLinen": {
+"cat": "Armadura",
+"es": "Capa de lino"
+},
+"FW_CapeTrollHide": {
+"cat": "Armadura",
+"es": "Capa de piel de trol"
+},
+"FW_CapeWolf": {
+"cat": "Armadura",
+"es": "Capa de pelo de lobo"
+},
+"FW_HelmetBronze": {
+"cat": "Armadura",
+"es": "Casco de bronce"
+},
+"FW_KnifeSilver": {
+"cat": "Armas",
+"es": "Cuchillo de plata"
+},
+"FW_KnifeSkollAndHati": {
+"cat": "Armas",
+"es": "Skoll y Hati"
+},
+"FW_ShieldBlackmetalTower": {
+"cat": "Escudos",
+"es": "Escudo de torre de metal negro"
+},
+"FW_StaffFireball": {
+"cat": "Armas",
+"es": "Bastón de Ascuas"
+},
+"FW_StaffLightning": {
+"cat": "Armas",
+"es": "Dundr"
+},
+"FW_SwordBlackmetal": {
+"cat": "Armas",
+"es": "Espada de metal negro"
+},
+"FaderDrop": {
+"cat": "Materiales",
+"es": "Costillas calcinadas"
+},
+"FaderEmber": {
+"cat": "Materiales",
+"es": "Brasas"
+},
+"FeastAshlands": {
+"cat": "Comida y pociones",
+"es": "Cuenco gourmet de las Tierras de Ceniza"
+},
+"FeastAshlands_Material": {
+"cat": "Materiales",
+"es": "Cuenco gourmet de las Tierras de Ceniza"
+},
+"FeastBlackforest": {
+"cat": "Comida y pociones",
+"es": "Bandeja de bufé del Bosque negro"
+},
+"FeastBlackforest_Material": {
+"cat": "Materiales",
+"es": "Bandeja de bufé del Bosque negro"
+},
+"FeastDeepNorth": {
+"cat": "Comida y pociones",
+"es": "Desayuno del norte"
+},
+"FeastDeepNorth_Material": {
+"cat": "Materiales",
+"es": "Desayuno del norte"
+},
+"FeastMeadows": {
+"cat": "Comida y pociones",
+"es": "Jabalí de pradera entero asado"
+},
+"FeastMeadows_Material": {
+"cat": "Materiales",
+"es": "Jabalí de pradera entero asado"
+},
+"FeastMistlands": {
+"cat": "Comida y pociones",
+"es": "Festín de setas al estilo de las Tierras Nubladas"
+},
+"FeastMistlands_Material": {
+"cat": "Materiales",
+"es": "Festín de setas al estilo de las Tierras Nubladas"
+},
+"FeastMountains": {
+"cat": "Comida y pociones",
+"es": "Guiso vigoroso del leñador de montaña"
+},
+"FeastMountains_Material": {
+"cat": "Materiales",
+"es": "Guiso vigoroso del leñador de montaña"
+},
+"FeastOceans": {
+"cat": "Comida y pociones",
+"es": "Manjar de marinero"
+},
+"FeastOceans_Material": {
+"cat": "Materiales",
+"es": "Manjar de marinero"
+},
+"FeastPlains": {
+"cat": "Comida y pociones",
+"es": "Pícnic de pastel de las llanuras"
+},
+"FeastPlains_Material": {
+"cat": "Materiales",
+"es": "Pícnic de pastel de las llanuras"
+},
+"FeastSwamps": {
+"cat": "Comida y pociones",
+"es": "Delicias del habitante del pantano"
+},
+"FeastSwamps_Material": {
+"cat": "Materiales",
+"es": "Delicias del habitante del pantano"
+},
+"Feaster": {
+"cat": "Herramientas",
+"es": "Bandeja para servir"
+},
+"Feathers": {
+"cat": "Materiales",
+"es": "Plumas"
+},
+"Fiddleheadfern": {
+"cat": "Comida y pociones",
+"es": "Cabeza de violín"
+},
+"FierySvinstew": {
+"cat": "Comida y pociones",
+"es": "Guiso porcino ardiente"
+},
+"FineWood": {
+"cat": "Materiales",
+"es": "Madera noble"
+},
+"FirCone": {
+"cat": "Materiales",
+"es": "Piña de abeto"
+},
+"FirConeFrost": {
+"cat": "Materiales",
+"es": "Cono de leño de construcción"
+},
+"FireworksRocket_Blue": {
+"cat": "Materiales",
+"es": "Cohete azul"
+},
+"FireworksRocket_Cyan": {
+"cat": "Materiales",
+"es": "Cohete cian"
+},
+"FireworksRocket_Green": {
+"cat": "Materiales",
+"es": "Cohete verde"
+},
+"FireworksRocket_Purple": {
+"cat": "Materiales",
+"es": "Cohete morado"
+},
+"FireworksRocket_Red": {
+"cat": "Materiales",
+"es": "Cohete rojo"
+},
+"FireworksRocket_White": {
+"cat": "Materiales",
+"es": "Cohete básico"
+},
+"FireworksRocket_Yellow": {
+"cat": "Materiales",
+"es": "Cohete amarillo"
+},
+"Fish1": {
+"cat": "Comida y pociones",
+"es": "Perca"
+},
+"Fish10": {
+"cat": "Comida y pociones",
+"es": "Salmón norteño"
+},
+"Fish11": {
+"cat": "Comida y pociones",
+"es": "Magmapez"
+},
+"Fish12": {
+"cat": "Comida y pociones",
+"es": "Pez globo"
+},
+"Fish2": {
+"cat": "Comida y pociones",
+"es": "Lucio"
+},
+"Fish3": {
+"cat": "Comida y pociones",
+"es": "Atún"
+},
+"Fish4_cave": {
+"cat": "Comida y pociones",
+"es": "Tetra"
+},
+"Fish5": {
+"cat": "Comida y pociones",
+"es": "Pez troll"
+},
+"Fish6": {
+"cat": "Comida y pociones",
+"es": "Arenque gigante"
+},
+"Fish7": {
+"cat": "Comida y pociones",
+"es": "Mero"
+},
+"Fish8": {
+"cat": "Comida y pociones",
+"es": "Bacalao de coral"
+},
+"Fish9": {
+"cat": "Comida y pociones",
+"es": "Rape"
+},
+"FishAndBread": {
+"cat": "Comida y pociones",
+"es": "Pan de pescado"
+},
+"FishAndBreadUncooked": {
+"cat": "Materiales",
+"es": "Pan de pescado sin cocinar"
+},
+"FishAnglerRaw": {
+"cat": "Materiales",
+"es": "Pescado crudo"
+},
+"FishCooked": {
+"cat": "Comida y pociones",
+"es": "Pescado cocinado"
+},
+"FishRaw": {
+"cat": "Materiales",
+"es": "Pescado crudo"
+},
+"FishSoup": {
+"cat": "Comida y pociones",
+"es": "Sopa de pescado"
+},
+"FishWraps": {
+"cat": "Comida y pociones",
+"es": "Rollitos de pescado"
+},
+"FishingBait": {
+"cat": "Flechas",
+"es": "Cebo"
+},
+"FishingBaitAshlands": {
+"cat": "Flechas",
+"es": "Carnada caliente"
+},
+"FishingBaitCave": {
+"cat": "Flechas",
+"es": "Carnada fría"
+},
+"FishingBaitDeepNorth": {
+"cat": "Flechas",
+"es": "Carnada helada"
+},
+"FishingBaitForest": {
+"cat": "Flechas",
+"es": "Carnada musgosa"
+},
+"FishingBaitMistlands": {
+"cat": "Flechas",
+"es": "Carnada brumosa"
+},
+"FishingBaitOcean": {
+"cat": "Flechas",
+"es": "Carnada pesada"
+},
+"FishingBaitPlains": {
+"cat": "Flechas",
+"es": "Carnada picosa"
+},
+"FishingBaitSwamp": {
+"cat": "Flechas",
+"es": "Carnada apestosa"
+},
+"FishingRod": {
+"cat": "Armas",
+"es": "Caña de pescar"
+},
+"FistBjornClaw": {
+"cat": "Armas",
+"es": "Garras de Bjorn"
+},
+"FistBjornUndeadClaw": {
+"cat": "Armas",
+"es": "Garras furiosas de hueso vil"
+},
+"FistFenrirClaw": {
+"cat": "Armas",
+"es": "Despellejadores"
+},
+"FistGold": {
+"cat": "Armas",
+"es": "Nudillos nord"
+},
+"FistGoldUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: nudillos nord"
+},
+"FistGold_BloodLightning": {
+"cat": "Armas",
+"es": "Nudillos de sangre de trueno"
+},
+"FistGold_FrostFire": {
+"cat": "Armas",
+"es": "Nudillos de fuego gélido"
+},
+"Flametal": {
+"cat": "Materiales",
+"es": "Metal antiguo"
+},
+"FlametalNew": {
+"cat": "Materiales",
+"es": "Flametal"
+},
+"FlametalOre": {
+"cat": "Materiales",
+"es": "Mineral de metal brillante"
+},
+"FlametalOreNew": {
+"cat": "Materiales",
+"es": "Mineral de llametal"
+},
+"Flax": {
+"cat": "Materiales",
+"es": "Lino"
+},
+"Flint": {
+"cat": "Materiales",
+"es": "Sílex"
+},
+"FragrantBundle": {
+"cat": "Materiales",
+"es": "Paquete fragante"
+},
+"FreezeGland": {
+"cat": "Materiales",
+"es": "Glándula congelada"
+},
+"FreshSeaweed": {
+"cat": "Materiales",
+"es": "Algas frescas"
+},
+"FrostCore": {
+"cat": "Materiales",
+"es": "Núcleo de escarcha"
+},
+"Frostwood": {
+"cat": "Materiales",
+"es": "Leño de construcción"
+},
+"FrozenFuel": {
+"cat": "Materiales",
+"es": "Escarcha líquida"
+},
+"FrozenKingDrop": {
+"cat": "Materiales",
+"es": "Sangre de sacrificio"
+},
+"GemstoneBlue": {
+"cat": "Materiales",
+"es": "Iolita"
+},
+"GemstoneGreen": {
+"cat": "Materiales",
+"es": "Jade"
+},
+"GemstoneRed": {
+"cat": "Materiales",
+"es": "Piedra de sangre"
+},
+"GenericMoldUncooked": {
+"cat": "Materiales",
+"es": "[item_smallparts_gold_uncooked]"
+},
+"GiantBloodSack": {
+"cat": "Materiales",
+"es": "Coágulo de sangre"
+},
+"GlowWorm": {
+"cat": "Comida y pociones",
+"es": "Larva luminosa"
+},
+"GoblinArmband": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"GoblinBruteBros_Attack": {
+"cat": "Armas",
+"es": "Brute sword"
+},
+"GoblinBruteBros_RageAttack": {
+"cat": "Armas",
+"es": "Brute sword"
+},
+"GoblinBrute_ArmGuard": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"GoblinBrute_Attack": {
+"cat": "Armas",
+"es": "Brute sword"
+},
+"GoblinBrute_Backbones": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"GoblinBrute_ExecutionerCap": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"GoblinBrute_HipCloth": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"GoblinBrute_LegBones": {
+"cat": "Accesorios",
+"es": "Iron plate armor"
+},
+"GoblinBrute_RageAttack": {
+"cat": "Armas",
+"es": "Brute sword"
+},
+"GoblinBrute_ShoulderGuard": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"GoblinBrute_Taunt": {
+"cat": "Armas",
+"es": "Brute taunt"
+},
+"GoblinClub": {
+"cat": "Armas",
+"es": "Club"
+},
+"GoblinClubDeepNorth": {
+"cat": "Armas",
+"es": "Club"
+},
+"GoblinHelmet": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"GoblinLegband": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"GoblinLoin": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"GoblinShaman_Headdress_antlers": {
+"cat": "Armadura",
+"es": "Club"
+},
+"GoblinShaman_Headdress_feathers": {
+"cat": "Armadura",
+"es": "Club"
+},
+"GoblinShaman_Staff_Bones": {
+"cat": "Accesorios",
+"es": "Club"
+},
+"GoblinShaman_Staff_Feathers": {
+"cat": "Accesorios",
+"es": "Club"
+},
+"GoblinShaman_Staff_Hildir": {
+"cat": "Accesorios",
+"es": "Club"
+},
+"GoblinShaman_attack_fireball_hildir": {
+"cat": "Armas",
+"es": "fireballattack"
+},
+"GoblinShaman_attack_poke": {
+"cat": "Armas",
+"es": "Club"
+},
+"GoblinShaman_attack_protect_hildir": {
+"cat": "Armas",
+"es": "heal"
+},
+"GoblinShoulders": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"GoblinSpear": {
+"cat": "Armas",
+"es": "Flint spear"
+},
+"GoblinSpearDeepNorth": {
+"cat": "Armas",
+"es": "Flint spear"
+},
+"GoblinSword": {
+"cat": "Armas",
+"es": "Bronze sword"
+},
+"GoblinSwordDeepNorth": {
+"cat": "Armas",
+"es": "Bronze sword"
+},
+"GoblinTorch": {
+"cat": "Armas",
+"es": "Torch"
+},
+"GoblinTorchDeepNorth": {
+"cat": "Armas",
+"es": "Torch"
+},
+"GoblinTotem": {
+"cat": "Otros",
+"es": "Tótem de fuling"
+},
+"Gold": {
+"cat": "Materiales",
+"es": "Oro sanguino"
+},
+"GoldOre": {
+"cat": "Materiales",
+"es": "Tejido petrificado"
+},
+"GrapplingHook": {
+"cat": "Armas",
+"es": "Gancho de agarre"
+},
+"Grausten": {
+"cat": "Materiales",
+"es": "Piedra cenicienta"
+},
+"GreydwarfEye": {
+"cat": "Materiales",
+"es": "Ojo de grisucio"
+},
+"Guck": {
+"cat": "Materiales",
+"es": "Viscosidad"
+},
+"Hair1": {
+"cat": "Otros",
+"es": "Coleta 1"
+},
+"Hair10": {
+"cat": "Otros",
+"es": "Hacia un lado 2"
+},
+"Hair10_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair11": {
+"cat": "Otros",
+"es": "Trenzas 2"
+},
+"Hair11_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair11_3": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair12": {
+"cat": "Otros",
+"es": "Trenzas 3"
+},
+"Hair12_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair13": {
+"cat": "Otros",
+"es": "Trenzas 4"
+},
+"Hair13_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair13_3": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair14": {
+"cat": "Otros",
+"es": "Hacia un lado 3"
+},
+"Hair14_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair15": {
+"cat": "Otros",
+"es": "Rizos hacia atrás"
+},
+"Hair15_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair15_3": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair16": {
+"cat": "Otros",
+"es": "Trenzas recogidas"
+},
+"Hair16_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair17": {
+"cat": "Otros",
+"es": "Trenzas bien cuidadas"
+},
+"Hair17_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair18": {
+"cat": "Otros",
+"es": "Trenzas de realeza"
+},
+"Hair18_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair19": {
+"cat": "Otros",
+"es": "Rizos 1"
+},
+"Hair2": {
+"cat": "Otros",
+"es": "Coleta 2"
+},
+"Hair20": {
+"cat": "Otros",
+"es": "Rizos 2"
+},
+"Hair21": {
+"cat": "Otros",
+"es": "Moños gemelos"
+},
+"Hair21_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair22": {
+"cat": "Otros",
+"es": "Moño singular"
+},
+"Hair22_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair23": {
+"cat": "Otros",
+"es": "Rizos cortos"
+},
+"Hair24": {
+"cat": "Otros",
+"es": "Afeitado y trenzado"
+},
+"Hair24_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair24_3": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair25": {
+"cat": "Otros",
+"es": "Moño singular 2"
+},
+"Hair26": {
+"cat": "Otros",
+"es": "Trenzas cortas"
+},
+"Hair27": {
+"cat": "Otros",
+"es": "Trenzas de la fuerza"
+},
+"Hair27_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair27_3": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair28": {
+"cat": "Otros",
+"es": "Trenza de comerciante"
+},
+"Hair28_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair28_3": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair29": {
+"cat": "Otros",
+"es": "Suelto 2"
+},
+"Hair29_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair3": {
+"cat": "Otros",
+"es": "Trenzas 1"
+},
+"Hair30": {
+"cat": "Otros",
+"es": "Suelto 3"
+},
+"Hair30_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair30_3": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair31": {
+"cat": "Otros",
+"es": "Trenzas recogidas"
+},
+"Hair31_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair31_3": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair32": {
+"cat": "Otros",
+"es": "Mullet"
+},
+"Hair32_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair32_3": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair33": {
+"cat": "Otros",
+"es": "Corte vinlandés"
+},
+"Hair33_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair34": {
+"cat": "Otros",
+"es": "Castellano"
+},
+"Hair34_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair34_3": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair35": {
+"cat": "Otros",
+"es": "Campeón"
+},
+"Hair35_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair35_3": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair36": {
+"cat": "Otros",
+"es": "Cronista"
+},
+"Hair36_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair36_3": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair37": {
+"cat": "Otros",
+"es": "Portasol"
+},
+"Hair37_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair37_3": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair38": {
+"cat": "Otros",
+"es": "Masculino"
+},
+"Hair38_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair38_3": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair3_2": {
+"cat": "Otros",
+"es": "Trenzas 1"
+},
+"Hair3_3": {
+"cat": "Otros",
+"es": "Trenzas 1"
+},
+"Hair4": {
+"cat": "Otros",
+"es": "Coleta 3"
+},
+"Hair4_2": {
+"cat": "Otros",
+"es": "Trenzas 1"
+},
+"Hair4_3": {
+"cat": "Otros",
+"es": "Trenzas 1"
+},
+"Hair5": {
+"cat": "Otros",
+"es": "Corto 1"
+},
+"Hair5_2": {
+"cat": "Otros",
+"es": "Trenzas 1"
+},
+"Hair6": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair6_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair6_3": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair7": {
+"cat": "Otros",
+"es": "Coleta 4"
+},
+"Hair7_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair8": {
+"cat": "Otros",
+"es": "Corto 2"
+},
+"Hair8_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hair9": {
+"cat": "Otros",
+"es": "Hacia un lado 1"
+},
+"Hair9_2": {
+"cat": "Otros",
+"es": "Largo 1"
+},
+"Hammer": {
+"cat": "Herramientas",
+"es": "Martillo"
+},
+"HardAntler": {
+"cat": "Materiales",
+"es": "Cornamenta dura"
+},
+"HareMeat": {
+"cat": "Materiales",
+"es": "Carne de liebre"
+},
+"HatefulBlood": {
+"cat": "Otros",
+"es": "Sangre maliciosa"
+},
+"HealthUpgrade_Bonemass": {
+"cat": "Comida y pociones",
+"es": "Bonemass heart"
+},
+"HealthUpgrade_GDKing": {
+"cat": "Comida y pociones",
+"es": "Elder heart"
+},
+"HelmetAshlandsMediumHood": {
+"cat": "Armadura",
+"es": "Capucha de Ask"
+},
+"HelmetBerserkerHood": {
+"cat": "Armadura",
+"es": "Tocado de Bjorn"
+},
+"HelmetBerserkerUndead": {
+"cat": "Armadura",
+"es": "Mentonera de hueso vil"
+},
+"HelmetBronze": {
+"cat": "Armadura",
+"es": "Casco de bronce"
+},
+"HelmetCarapace": {
+"cat": "Armadura",
+"es": "Casco de Caparazón"
+},
+"HelmetCelebration": {
+"cat": "Armadura",
+"es": "Gorra festiva"
+},
+"HelmetCrownofValheim": {
+"cat": "Armadura",
+"es": "Corona de Valheim"
+},
+"HelmetDNHeavy": {
+"cat": "Armadura",
+"es": "Yelmo del Protector"
+},
+"HelmetDNMage": {
+"cat": "Armadura",
+"es": "Tocado del Invocador"
+},
+"HelmetDNMediumHood": {
+"cat": "Armadura",
+"es": "Capucha de la Vanguardia"
+},
+"HelmetDrake": {
+"cat": "Armadura",
+"es": "Casco dracónico"
+},
+"HelmetDverger": {
+"cat": "Armadura",
+"es": "Diadema de Dverger"
+},
+"HelmetFenring": {
+"cat": "Armadura",
+"es": "Capucha de Fenris"
+},
+"HelmetFishingHat": {
+"cat": "Armadura",
+"es": "Gorro de pescar"
+},
+"HelmetFlametal": {
+"cat": "Armadura",
+"es": "Casco de llametal"
+},
+"HelmetHat1": {
+"cat": "Armadura",
+"es": "Pañuelo atado azul"
+},
+"HelmetHat10": {
+"cat": "Armadura",
+"es": "Gorro sencillo morado"
+},
+"HelmetHat2": {
+"cat": "Armadura",
+"es": "Pañuelo trenzado verde"
+},
+"HelmetHat3": {
+"cat": "Armadura",
+"es": "Gorro de piel marrón"
+},
+"HelmetHat4": {
+"cat": "Armadura",
+"es": "Gorro verde extravagante"
+},
+"HelmetHat5": {
+"cat": "Armadura",
+"es": "Gorro sencillo rojo"
+},
+"HelmetHat6": {
+"cat": "Armadura",
+"es": "Pañuelo atado amarillo"
+},
+"HelmetHat7": {
+"cat": "Armadura",
+"es": "Pañuelo trenzado rojo"
+},
+"HelmetHat8": {
+"cat": "Armadura",
+"es": "Gorro de piel gris"
+},
+"HelmetHat9": {
+"cat": "Armadura",
+"es": "Gorro naranja extravagante"
+},
+"HelmetIron": {
+"cat": "Armadura",
+"es": "Casco de hierro"
+},
+"HelmetLeather": {
+"cat": "Armadura",
+"es": "Casco de cuero"
+},
+"HelmetLox": {
+"cat": "Armadura",
+"es": "Capucha de piel de lox"
+},
+"HelmetMage": {
+"cat": "Armadura",
+"es": "Capucha tejida en Eitr"
+},
+"HelmetMage_Ashlands": {
+"cat": "Armadura",
+"es": "Capucha de Embla"
+},
+"HelmetMidsummerCrown": {
+"cat": "Armadura",
+"es": "Corona estival"
+},
+"HelmetOdin": {
+"cat": "Armadura",
+"es": "Capucha de Odín"
+},
+"HelmetPadded": {
+"cat": "Armadura",
+"es": "Casco acolchado"
+},
+"HelmetPointyHat": {
+"cat": "Armadura",
+"es": "Sombrero puntiagudo"
+},
+"HelmetRoot": {
+"cat": "Armadura",
+"es": "Máscara de raíces"
+},
+"HelmetRootCrown": {
+"cat": "Armadura",
+"es": "Corona de raíces"
+},
+"HelmetStrawHat": {
+"cat": "Armadura",
+"es": "Sombrero de paja"
+},
+"HelmetSweatBand": {
+"cat": "Armadura",
+"es": "Cinta para el pelo"
+},
+"HelmetTrollLeather": {
+"cat": "Armadura",
+"es": "Casco de cuero de trol"
+},
+"HelmetYule": {
+"cat": "Armadura",
+"es": "Gorro de Navidad"
+},
+"HildirKey_forestcrypt": {
+"cat": "Otros",
+"es": "Llave de latón de Hildir"
+},
+"HildirKey_mountaincave": {
+"cat": "Otros",
+"es": "Llave de plata de Hildir"
+},
+"HildirKey_plainsfortress": {
+"cat": "Otros",
+"es": "Llave de bronce de Hildir"
+},
+"Hoe": {
+"cat": "Herramientas",
+"es": "Azada"
+},
+"Honey": {
+"cat": "Comida y pociones",
+"es": "Miel"
+},
+"HoneyGlazedChicken": {
+"cat": "Comida y pociones",
+"es": "Pollo glaseado en miel"
+},
+"HoneyGlazedChickenUncooked": {
+"cat": "Materiales",
+"es": "Pollo glaseado en miel sin cocinar"
+},
+"Hook": {
+"cat": "Materiales",
+"es": "Gancho"
+},
+"Ice": {
+"cat": "Materiales",
+"es": "Hielo"
+},
+"IceShoes": {
+"cat": "Accesorios",
+"es": "[item_iceshoes]"
+},
+"IceSkates": {
+"cat": "Accesorios",
+"es": "[item_iceskates]"
+},
+"Iron": {
+"cat": "Materiales",
+"es": "Hierro"
+},
+"IronNails": {
+"cat": "Materiales",
+"es": "Clavos de hierro"
+},
+"IronOre": {
+"cat": "Materiales",
+"es": "Mineral de hierro"
+},
+"IronScrap": {
+"cat": "Materiales",
+"es": "Chatarra"
+},
+"Ironpit": {
+"cat": "Materiales",
+"es": "Brasero de hierro"
+},
+"JotunHairFemale": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"JotunHairMale": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"JotunHairMale2": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"JotunHairMale3": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"JotunHairMale4": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"JotunHairMale5": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"JotunHairMale6": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"JotunHairMale7": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"JotunHairMale8": {
+"cat": "Armadura",
+"es": "Iron plate armor"
+},
+"JotunWarrior1HAxe_attack_cleave": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"JotunWarrior1HAxe_attack_dodge": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"JotunWarrior1HAxe_attack_dodger": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"JotunWarrior1HAxe_attack_slash": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"JotunWarrior1HAxe_attack_slashdw": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"JotunWarrior2HAxe_attack_charge": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"JotunWarrior2HAxe_attack_cleave": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"JotunWarrior2HAxe_attack_dodge": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"JotunWarrior2HAxe_attack_slash": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"JotunWarrior2HSword_attack_charge": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"JotunWarrior2HSword_attack_cleave": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"JotunWarrior2HSword_attack_dodge": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"JotunWarrior2HSword_attack_slash": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"JotunWarriorSword2h": {
+"cat": "Armas",
+"es": "Club"
+},
+"JotunWarrior_attack_sword": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"JuteBlue": {
+"cat": "Materiales",
+"es": "Yute azul"
+},
+"JuteRed": {
+"cat": "Materiales",
+"es": "Yute rojo"
+},
+"Kale": {
+"cat": "Comida y pociones",
+"es": "Col rizada"
+},
+"KaleChips": {
+"cat": "Comida y pociones",
+"es": "Chips de col rizada"
+},
+"KaleChipsUncooked": {
+"cat": "Materiales",
+"es": "Chips de col rizada cruda"
+},
+"KaleSeeds": {
+"cat": "Materiales",
+"es": "Semillas de col rizada"
+},
+"KeysGoldUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: llave intrincada"
+},
+"KnifeBlackMetal": {
+"cat": "Armas",
+"es": "Cuchillo de metal negro"
+},
+"KnifeButcher": {
+"cat": "Armas",
+"es": "Cuchillo de carnicero"
+},
+"KnifeChitin": {
+"cat": "Armas",
+"es": "Navaja abisal"
+},
+"KnifeCopper": {
+"cat": "Armas",
+"es": "Cuchillo de cobre"
+},
+"KnifeFlint": {
+"cat": "Armas",
+"es": "Cuchillo de sílex"
+},
+"KnifeGold": {
+"cat": "Armas",
+"es": "Daga nord"
+},
+"KnifeGoldUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: daga nord"
+},
+"KnifeGold_BloodLightning": {
+"cat": "Armas",
+"es": "Daga de sangre de trueno"
+},
+"KnifeGold_FrostFire": {
+"cat": "Armas",
+"es": "Daga de fuego gélido"
+},
+"KnifeSilver": {
+"cat": "Armas",
+"es": "Cuchillo de plata"
+},
+"KnifeSkollAndHati": {
+"cat": "Armas",
+"es": "Skoll y Hati"
+},
+"KnifeVoid": {
+"cat": "Armas",
+"es": "Invocador del Vacío"
+},
+"KnifeWood": {
+"cat": "Armas",
+"es": "Cuchillo de madera"
+},
+"Lantern": {
+"cat": "Herramientas",
+"es": "Linterna dvergr"
+},
+"Lantern_DN": {
+"cat": "Herramientas",
+"es": "Salvaged Lantern"
+},
+"Lantern_hooded": {
+"cat": "Herramientas",
+"es": "Farol con capucha"
+},
+"Larva": {
+"cat": "Materiales",
+"es": "[item_larva]"
+},
+"LastBossGate_RuneTile": {
+"cat": "Materiales",
+"es": "[item_runetile]"
+},
+"LeatherScraps": {
+"cat": "Materiales",
+"es": "Trozos de cuero"
+},
+"Leatherstraps": {
+"cat": "Materiales",
+"es": "Correas de cuero"
+},
+"LinenThread": {
+"cat": "Materiales",
+"es": "Hilo de lino"
+},
+"Lingonberry": {
+"cat": "Comida y pociones",
+"es": "Arándanos rojos"
+},
+"Lingondricka": {
+"cat": "Comida y pociones",
+"es": "Zumo de arándanos rojos"
+},
+"LoxMeat": {
+"cat": "Materiales",
+"es": "Carne de luey"
+},
+"LoxPelt": {
+"cat": "Materiales",
+"es": "Piel de luey"
+},
+"LoxPie": {
+"cat": "Comida y pociones",
+"es": "Pastel de luey"
+},
+"LoxPieUncooked": {
+"cat": "Materiales",
+"es": "Pastel de luey sin hornear"
+},
+"MaceBronze": {
+"cat": "Armas",
+"es": "Maza de bronce"
+},
+"MaceEldner": {
+"cat": "Armas",
+"es": "Maza de llametal"
+},
+"MaceEldnerBlood": {
+"cat": "Armas",
+"es": "Sanguinaria"
+},
+"MaceEldnerLightning": {
+"cat": "Armas",
+"es": "Estrella de tormenta"
+},
+"MaceEldnerNature": {
+"cat": "Armas",
+"es": "Klossen"
+},
+"MaceGold": {
+"cat": "Armas",
+"es": "Maza nord"
+},
+"MaceGoldUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: maza nord"
+},
+"MaceGold_BloodLightning": {
+"cat": "Armas",
+"es": "Maza de sangre de trueno"
+},
+"MaceGold_FrostFire": {
+"cat": "Armas",
+"es": "Maza de fuego gélido"
+},
+"MaceIron": {
+"cat": "Armas",
+"es": "Maza de hierro"
+},
+"MaceNeedle": {
+"cat": "Armas",
+"es": "Puercoespín"
+},
+"MaceSilver": {
+"cat": "Armas",
+"es": "Escarchador"
+},
+"MaceWood": {
+"cat": "Armas",
+"es": "Maza de madera"
+},
+"MagicallyStuffedShroom": {
+"cat": "Comida y pociones",
+"es": "Hongos rellenos"
+},
+"MagicallyStuffedShroomUncooked": {
+"cat": "Materiales",
+"es": "Hongo relleno sin cocinar"
+},
+"Mandible": {
+"cat": "Materiales",
+"es": "Mandíbula"
+},
+"MarinatedGreens": {
+"cat": "Comida y pociones",
+"es": "Verduras marinadas"
+},
+"MashedMeat": {
+"cat": "Comida y pociones",
+"es": "Puré de carne"
+},
+"MeadBaseBugRepellent": {
+"cat": "Materiales",
+"es": "Base de hidromiel: fuerza de trol"
+},
+"MeadBaseBzerker": {
+"cat": "Materiales",
+"es": "Base de hidromiel: Berserkir"
+},
+"MeadBaseEitrLingering": {
+"cat": "Materiales",
+"es": "Malta: Eitr constante"
+},
+"MeadBaseEitrMinor": {
+"cat": "Materiales",
+"es": "Malta: Mágica"
+},
+"MeadBaseFrostResist": {
+"cat": "Materiales",
+"es": "Malta: resistencia al frío"
+},
+"MeadBaseHasty": {
+"cat": "Materiales",
+"es": "Base de hidromiel: Ratatosk"
+},
+"MeadBaseHealthLingering": {
+"cat": "Materiales",
+"es": "Malta: salud constante"
+},
+"MeadBaseHealthMajor": {
+"cat": "Materiales",
+"es": "Malta: Extra supersaludable"
+},
+"MeadBaseHealthMedium": {
+"cat": "Materiales",
+"es": "Malta: supersaludable"
+},
+"MeadBaseHealthMinor": {
+"cat": "Materiales",
+"es": "Malta: saludable"
+},
+"MeadBaseLightFoot": {
+"cat": "Materiales",
+"es": "Base de hidromiel: Pies ligeros"
+},
+"MeadBasePoisonResist": {
+"cat": "Materiales",
+"es": "Malta: resistencia al veneno"
+},
+"MeadBaseStaminaLingering": {
+"cat": "Materiales",
+"es": "Malta: Vigorización constante"
+},
+"MeadBaseStaminaMedium": {
+"cat": "Materiales",
+"es": "Malta: supervigorizante"
+},
+"MeadBaseStaminaMinor": {
+"cat": "Materiales",
+"es": "Malta: vigorizante"
+},
+"MeadBaseStrength": {
+"cat": "Materiales",
+"es": "Base de hidromiel: Fuerza de trol"
+},
+"MeadBaseSwimmer": {
+"cat": "Materiales",
+"es": "Base de hidromiel: Vananidir"
+},
+"MeadBaseTamer": {
+"cat": "Materiales",
+"es": "Base de hidromiel: susurros salvajes"
+},
+"MeadBaseTasty": {
+"cat": "Materiales",
+"es": "Malta: sabrosa"
+},
+"MeadBugRepellent": {
+"cat": "Comida y pociones",
+"es": "Brebaje antipicaduras"
+},
+"MeadBzerker": {
+"cat": "Comida y pociones",
+"es": "Hidromiel berserkir"
+},
+"MeadEitrLingering": {
+"cat": "Comida y pociones",
+"es": "Hidromiel de Eitr persistente"
+},
+"MeadEitrMinor": {
+"cat": "Comida y pociones",
+"es": "Hidromiel mágico"
+},
+"MeadFrostResist": {
+"cat": "Comida y pociones",
+"es": "Hidromiel resistente a la congelación"
+},
+"MeadHasty": {
+"cat": "Comida y pociones",
+"es": "Tónico de Ratatosk"
+},
+"MeadHealthLingering": {
+"cat": "Comida y pociones",
+"es": "Hidromiel curativo persistente"
+},
+"MeadHealthMajor": {
+"cat": "Comida y pociones",
+"es": "Hidromiel extra supersaludable"
+},
+"MeadHealthMedium": {
+"cat": "Comida y pociones",
+"es": "Hidromiel supersaludable"
+},
+"MeadHealthMinor": {
+"cat": "Comida y pociones",
+"es": "Hidromiel saludable"
+},
+"MeadLightfoot": {
+"cat": "Comida y pociones",
+"es": "Hidromiel de pies ligeros"
+},
+"MeadPoisonResist": {
+"cat": "Comida y pociones",
+"es": "Hidromiel resistente al veneno"
+},
+"MeadStaminaLingering": {
+"cat": "Comida y pociones",
+"es": "Hidromiel de vigorización constante"
+},
+"MeadStaminaMedium": {
+"cat": "Comida y pociones",
+"es": "Hidromiel supervigorizante"
+},
+"MeadStaminaMinor": {
+"cat": "Comida y pociones",
+"es": "Hidromiel vigorizante"
+},
+"MeadStrength": {
+"cat": "Comida y pociones",
+"es": "Hidromiel de fuerza de trol"
+},
+"MeadSwimmer": {
+"cat": "Comida y pociones",
+"es": "Elixir de Vananidir"
+},
+"MeadTamer": {
+"cat": "Comida y pociones",
+"es": "Brebaje de susurros salvajes"
+},
+"MeadTasty": {
+"cat": "Comida y pociones",
+"es": "Hidromiel sabrosa"
+},
+"MeadTrollPheromones": {
+"cat": "Comida y pociones",
+"es": "Poción de amor"
+},
+"MeatPlatter": {
+"cat": "Comida y pociones",
+"es": "Plato de carne"
+},
+"MeatPlatterUncooked": {
+"cat": "Materiales",
+"es": "Plato de carne sin cocinar"
+},
+"MeatballsMashedPoteitr": {
+"cat": "Comida y pociones",
+"es": "Albóndigas con poteitr"
+},
+"MechanicalSpring": {
+"cat": "Materiales",
+"es": "Resorte mecánico"
+},
+"MemorialCoal": {
+"cat": "Materiales",
+"es": "Carbón memorial"
+},
+"MinceMeatSauce": {
+"cat": "Comida y pociones",
+"es": "Salsa de carne picada"
+},
+"MisthareSupreme": {
+"cat": "Comida y pociones",
+"es": "Supremacía de la liebre neblinosa"
+},
+"MisthareSupremeUncooked": {
+"cat": "Materiales",
+"es": "Supremacía de la liebre neblinosa sin cocinar"
+},
+"MoldArmorGoldChest": {
+"cat": "Materiales",
+"es": "Molde: coraza del Protector"
+},
+"MoldArmorGoldHelmet": {
+"cat": "Materiales",
+"es": "Molde: yelmo del Protector"
+},
+"MoldArmorGoldLegs": {
+"cat": "Materiales",
+"es": "Molde: pantalones del Protector"
+},
+"MoldArmorMageChest": {
+"cat": "Materiales",
+"es": "Molde: túnica del Invocador"
+},
+"MoldArmorMageHelmet": {
+"cat": "Materiales",
+"es": "Molde: tocado del Invocador"
+},
+"MoldArmorMageLegs": {
+"cat": "Materiales",
+"es": "Molde: pantalones del Invocador"
+},
+"MoldArmorMediumHelmet": {
+"cat": "Materiales",
+"es": "Molde: capucha de la Vanguardia"
+},
+"MoldArmorMediumLegs": {
+"cat": "Materiales",
+"es": "Molde: pantalones de la Vanguardia"
+},
+"MoldArmormediumChest": {
+"cat": "Materiales",
+"es": "Molde: peto de la Vanguardia"
+},
+"MoldAtgeir": {
+"cat": "Materiales",
+"es": "Molde: atgeir nord"
+},
+"MoldAxe": {
+"cat": "Materiales",
+"es": "Molde: hacha nord"
+},
+"MoldAxe2H": {
+"cat": "Materiales",
+"es": "Molde: gran hacha nord"
+},
+"MoldBow": {
+"cat": "Materiales",
+"es": "Molde: arco nord"
+},
+"MoldCrossbow": {
+"cat": "Materiales",
+"es": "Molde: ballesta nord"
+},
+"MoldFistweapon": {
+"cat": "Materiales",
+"es": "Molde: nudillos nord"
+},
+"MoldKeys": {
+"cat": "Materiales",
+"es": "Molde: llave intrincada"
+},
+"MoldKnife": {
+"cat": "Materiales",
+"es": "Molde: daga nord"
+},
+"MoldMace": {
+"cat": "Materiales",
+"es": "Molde: maza nord"
+},
+"MoldMace2H": {
+"cat": "Materiales",
+"es": "Molde: almádena nord"
+},
+"MoldShieldBuckler": {
+"cat": "Materiales",
+"es": "Molde: broquel nord"
+},
+"MoldShieldRound": {
+"cat": "Materiales",
+"es": "Molde: escudo nord"
+},
+"MoldShieldTower": {
+"cat": "Materiales",
+"es": "Molde: gran escudo nord"
+},
+"MoldSmallParts": {
+"cat": "Materiales",
+"es": "[item_mold_smallparts]"
+},
+"MoldSpear": {
+"cat": "Materiales",
+"es": "Molde: lanza nord"
+},
+"MoldStaffOrbofAhri": {
+"cat": "Materiales",
+"es": "Molde: púa de eco"
+},
+"MoldStafffrostorbs": {
+"cat": "Materiales",
+"es": "Molde: venganza del norte"
+},
+"MoldStaffspiritcaller": {
+"cat": "Materiales",
+"es": "Molde: invocador de espíritus"
+},
+"MoldStaffthunderblood": {
+"cat": "Materiales",
+"es": "Molde: golpe de relámpago"
+},
+"MoldSword": {
+"cat": "Materiales",
+"es": "Molde: espada nord"
+},
+"MoldSword2H": {
+"cat": "Materiales",
+"es": "Molde: espadón nord"
+},
+"MoleClaws": {
+"cat": "Materiales",
+"es": "Garras largas"
+},
+"MoltenCore": {
+"cat": "Materiales",
+"es": "Núcleo fundido"
+},
+"MooseHide": {
+"cat": "Materiales",
+"es": "Piel de alce"
+},
+"MooseKebab": {
+"cat": "Comida y pociones",
+"es": "Carne en pan"
+},
+"MooseMeat": {
+"cat": "Materiales",
+"es": "Carne de alce"
+},
+"MooseSinew": {
+"cat": "Materiales",
+"es": "Tendón de alce"
+},
+"MorgenHeart": {
+"cat": "Materiales",
+"es": "Corazón de Morgen"
+},
+"MorgenSinew": {
+"cat": "Materiales",
+"es": "Tendón de Morgen"
+},
+"Mushroom": {
+"cat": "Comida y pociones",
+"es": "Seta"
+},
+"MushroomBlue": {
+"cat": "Comida y pociones",
+"es": "Seta azul"
+},
+"MushroomBzerker": {
+"cat": "Comida y pociones",
+"es": "Amanita"
+},
+"MushroomJotunPuffs": {
+"cat": "Comida y pociones",
+"es": "Soplo de Jotun"
+},
+"MushroomMagecap": {
+"cat": "Comida y pociones",
+"es": "Oronja de los magos"
+},
+"MushroomOmelette": {
+"cat": "Comida y pociones",
+"es": "Tortilla de hongos"
+},
+"MushroomSmokePuff": {
+"cat": "Comida y pociones",
+"es": "Soplahumo"
+},
+"MushroomYellow": {
+"cat": "Comida y pociones",
+"es": "Seta amarilla"
+},
+"NeckTail": {
+"cat": "Materiales",
+"es": "Cola de nixe"
+},
+"NeckTailGrilled": {
+"cat": "Comida y pociones",
+"es": "Cola de nixe asada"
+},
+"Needle": {
+"cat": "Materiales",
+"es": "Aguja"
+},
+"NornThread": {
+"cat": "Materiales",
+"es": "Hilo de Norna"
+},
+"Oat": {
+"cat": "Comida y pociones",
+"es": "Avena"
+},
+"OatFlour": {
+"cat": "Otros",
+"es": "Harina de avena"
+},
+"OatMilk": {
+"cat": "Comida y pociones",
+"es": "Leche de avena"
+},
+"OatSeeds": {
+"cat": "Materiales",
+"es": "Semillas de avena"
+},
+"OatmealLingonberryJam": {
+"cat": "Comida y pociones",
+"es": "Gachas de avena"
+},
+"Obsidian": {
+"cat": "Materiales",
+"es": "Obsidiana"
+},
+"Onion": {
+"cat": "Comida y pociones",
+"es": "Cebolla"
+},
+"OnionSeeds": {
+"cat": "Materiales",
+"es": "Semillas de cebolla"
+},
+"OnionSoup": {
+"cat": "Comida y pociones",
+"es": "Sopa de cebolla"
+},
+"Ooze": {
+"cat": "Materiales",
+"es": "Lodo"
+},
+"OozeMork": {
+"cat": "Materiales",
+"es": "Pulpa muerta"
+},
+"OrbFrostFire": {
+"cat": "Materiales",
+"es": "Esencia de fuego gélido"
+},
+"OrbThunderBlood": {
+"cat": "Materiales",
+"es": "Esencia de sangre de trueno"
+},
+"OvenPancake": {
+"cat": "Comida y pociones",
+"es": "Tortita al horno"
+},
+"OvenPancakeUncooked": {
+"cat": "Materiales",
+"es": "Masa para tortita al horno"
+},
+"Pancakes": {
+"cat": "Comida y pociones",
+"es": "Tortitas"
+},
+"PickaxeAntler": {
+"cat": "Armas",
+"es": "Pico de cuernos"
+},
+"PickaxeBlackMetal": {
+"cat": "Armas",
+"es": "Pico de metal negro"
+},
+"PickaxeBronze": {
+"cat": "Armas",
+"es": "Pico de bronce"
+},
+"PickaxeIron": {
+"cat": "Armas",
+"es": "Pico de hierro"
+},
+"PickaxeStone": {
+"cat": "Armas",
+"es": "Pico de piedra"
+},
+"PineCone": {
+"cat": "Materiales",
+"es": "Piña de pino"
+},
+"PiquantPie": {
+"cat": "Comida y pociones",
+"es": "Pastel picante"
+},
+"PiquantPieUncooked": {
+"cat": "Materiales",
+"es": " Pastel picante crudo"
+},
+"PlayerUnarmed": {
+"cat": "Armas",
+"es": "Unarmed"
+},
+"Pot_Shard_Green": {
+"cat": "Materiales",
+"es": "Fragmento de olla"
+},
+"Pot_Shard_Red": {
+"cat": "Materiales",
+"es": "[item_pot_shard_red]"
+},
+"Poteitr": {
+"cat": "Comida y pociones",
+"es": "Poteitr"
+},
+"PoteitrSeeds": {
+"cat": "Materiales",
+"es": "Semilla de poteitr"
+},
+"PowderedDragonEgg": {
+"cat": "Materiales",
+"es": "Cáscaras de huevo de dragón en polvo"
+},
+"ProustitePowder": {
+"cat": "Materiales",
+"es": "Polvo de proustita"
+},
+"Pukeberries": {
+"cat": "Comida y pociones",
+"es": "Bayarcadas"
+},
+"PulledBear": {
+"cat": "Comida y pociones",
+"es": "Carne de oso desmenuzada"
+},
+"PungentPebbles": {
+"cat": "Materiales",
+"es": "Guijarros intensos"
+},
+"QueenBee": {
+"cat": "Materiales",
+"es": "Abeja reina"
+},
+"QueenDrop": {
+"cat": "Materiales",
+"es": "Caparazón majestuoso"
+},
+"QueensJam": {
+"cat": "Comida y pociones",
+"es": "Mermelada de la reina"
+},
+"Raspberry": {
+"cat": "Comida y pociones",
+"es": "Frambuesas"
+},
+"RawMeat": {
+"cat": "Materiales",
+"es": "Carne de jabalí"
+},
+"Resin": {
+"cat": "Materiales",
+"es": "Resina"
+},
+"RoastedCrustPie": {
+"cat": "Comida y pociones",
+"es": "Pastel de masa asada"
+},
+"RoastedCrustPieUncooked": {
+"cat": "Materiales",
+"es": "Pastel de masa asada crudo"
+},
+"Root": {
+"cat": "Materiales",
+"es": "Raíz"
+},
+"RottenMeat": {
+"cat": "Comida y pociones",
+"es": "Carne podrida"
+},
+"RoundLog": {
+"cat": "Materiales",
+"es": "Madera resistente"
+},
+"RoyalJelly": {
+"cat": "Comida y pociones",
+"es": "Jalea real"
+},
+"Ruby": {
+"cat": "Materiales",
+"es": "Rubí"
+},
+"SP_ArmorBronzeChest": {
+"cat": "Armadura",
+"es": "Coraza de placas de bronce"
+},
+"SP_ArmorBronzeLegs": {
+"cat": "Armadura",
+"es": "Mallas de placas de bronce"
+},
+"SP_ArmorDress1": {
+"cat": "Armadura",
+"es": "Vestido sencillo marrón"
+},
+"SP_ArmorFenringChest": {
+"cat": "Armadura",
+"es": "Pelaje de Fenris"
+},
+"SP_ArmorFenringLegs": {
+"cat": "Armadura",
+"es": "Mallas de Fenris"
+},
+"SP_ArmorLeatherLegs": {
+"cat": "Armadura",
+"es": "Pantalones de cuero"
+},
+"SP_ArmorMageChest": {
+"cat": "Armadura",
+"es": "Túnica tejida en Eitr"
+},
+"SP_ArmorMageChest_Ashlands": {
+"cat": "Armadura",
+"es": "Túnica de Embla"
+},
+"SP_ArmorMageLegs": {
+"cat": "Armadura",
+"es": "Pantalones tejidos en Eitr"
+},
+"SP_ArmorMageLegs_Ashlands": {
+"cat": "Armadura",
+"es": "Pantalones de Embla"
+},
+"SP_ArmorPaddedCuirass": {
+"cat": "Armadura",
+"es": "Gambesón acolchado"
+},
+"SP_ArmorPaddedGreaves": {
+"cat": "Armadura",
+"es": "Grebas acolchadas"
+},
+"SP_ArmorTrollLeatherChest": {
+"cat": "Armadura",
+"es": "Túnica de cuero de trol"
+},
+"SP_ArmorTrollLeatherLegs": {
+"cat": "Armadura",
+"es": "Pantalones de cuero de trol"
+},
+"SP_ArmorTunic5": {
+"cat": "Armadura",
+"es": "Túnica roja con capa"
+},
+"SP_AxeBronze": {
+"cat": "Armas",
+"es": "Hacha de bronce"
+},
+"SP_BattleaxeCrystal": {
+"cat": "Armas",
+"es": "Hacha de guerra de cristal"
+},
+"SP_BowDraugrFang": {
+"cat": "Armas",
+"es": "Colmillo de draugr"
+},
+"SP_CapeLinen": {
+"cat": "Armadura",
+"es": "Capa de lino"
+},
+"SP_CapeTrollHide": {
+"cat": "Armadura",
+"es": "Capa de piel de trol"
+},
+"SP_CapeWolf": {
+"cat": "Armadura",
+"es": "Capa de pelo de lobo"
+},
+"SP_HelmetBronze": {
+"cat": "Armadura",
+"es": "Casco de bronce"
+},
+"SP_KnifeSilver": {
+"cat": "Armas",
+"es": "Cuchillo de plata"
+},
+"SP_KnifeSkollAndHati": {
+"cat": "Armas",
+"es": "Skoll y Hati"
+},
+"SP_ShieldBlackmetalTower": {
+"cat": "Escudos",
+"es": "Escudo de torre de metal negro"
+},
+"SP_StaffFireball": {
+"cat": "Armas",
+"es": "Bastón de Ascuas"
+},
+"SP_StaffLightning": {
+"cat": "Armas",
+"es": "Dundr"
+},
+"SP_SwordBlackmetal": {
+"cat": "Armas",
+"es": "Espada de metal negro"
+},
+"SaddleAsksvin": {
+"cat": "Otros",
+"es": "Silla de cenicerdo"
+},
+"SaddleLox": {
+"cat": "Otros",
+"es": "Silla de montar para luey"
+},
+"SaddleMoose": {
+"cat": "Otros",
+"es": "Silla de alce"
+},
+"Salad": {
+"cat": "Comida y pociones",
+"es": "Ensalada"
+},
+"Sap": {
+"cat": "Materiales",
+"es": "Savia"
+},
+"Sausages": {
+"cat": "Comida y pociones",
+"es": "Salchichas"
+},
+"ScaleHide": {
+"cat": "Materiales",
+"es": "Piel escamosa"
+},
+"ScorchingMedley": {
+"cat": "Comida y pociones",
+"es": "Mezcla abrasadora"
+},
+"Scythe": {
+"cat": "Armas",
+"es": "Guadaña"
+},
+"ScytheHandle": {
+"cat": "Otros",
+"es": "Mango de guadaña"
+},
+"SealBlubber": {
+"cat": "Materiales",
+"es": "Grasa de foca"
+},
+"SealHide": {
+"cat": "Materiales",
+"es": "Piel de foca"
+},
+"SealSoup": {
+"cat": "Comida y pociones",
+"es": "Sopa de carne de foca"
+},
+"SeekerAspic": {
+"cat": "Comida y pociones",
+"es": "Espliego de buscador"
+},
+"SeekerBrute_Taunt": {
+"cat": "Armas",
+"es": "Brute taunt"
+},
+"SeekerQueen_Call": {
+"cat": "Armas",
+"es": "Brute taunt"
+},
+"SeekerQueen_Teleport": {
+"cat": "Armas",
+"es": "Brute taunt"
+},
+"SerpentMeat": {
+"cat": "Materiales",
+"es": "Carne de serpiente"
+},
+"SerpentMeatCooked": {
+"cat": "Comida y pociones",
+"es": "Carne de serpiente preparada"
+},
+"SerpentScale": {
+"cat": "Materiales",
+"es": "Escama de serpiente"
+},
+"SerpentStew": {
+"cat": "Comida y pociones",
+"es": "Cocido de serpiente"
+},
+"SharpeningStone": {
+"cat": "Materiales",
+"es": "Piedra de afilar"
+},
+"ShieldBanded": {
+"cat": "Escudos",
+"es": "Escudo de aros"
+},
+"ShieldBlackmetal": {
+"cat": "Escudos",
+"es": "Escudo de metal negro"
+},
+"ShieldBlackmetalTower": {
+"cat": "Escudos",
+"es": "Escudo de torre de metal negro"
+},
+"ShieldBoneTower": {
+"cat": "Escudos",
+"es": "Escudo de torre de hueso"
+},
+"ShieldBronzeBuckler": {
+"cat": "Escudos",
+"es": "Rodela de bronce"
+},
+"ShieldBucklerGoldUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: broquel nord"
+},
+"ShieldCarapace": {
+"cat": "Escudos",
+"es": "Escudo de caparazón"
+},
+"ShieldCarapaceBuckler": {
+"cat": "Escudos",
+"es": "Rodela de caparazón"
+},
+"ShieldCore": {
+"cat": "Materiales",
+"es": "Núcleo de escudo"
+},
+"ShieldFlametal": {
+"cat": "Escudos",
+"es": "Escudo de llametal"
+},
+"ShieldFlametalTower": {
+"cat": "Escudos",
+"es": "Escudo de torre de llametal"
+},
+"ShieldGold": {
+"cat": "Escudos",
+"es": "Escudo nord"
+},
+"ShieldGoldBuckler": {
+"cat": "Escudos",
+"es": "Broquel nord"
+},
+"ShieldGoldTower": {
+"cat": "Escudos",
+"es": "Gran escudo nord"
+},
+"ShieldIronBuckler": {
+"cat": "Escudos",
+"es": "Rodela de hierro"
+},
+"ShieldIronSquare": {
+"cat": "Escudos",
+"es": "Escudo de hierro"
+},
+"ShieldIronTower": {
+"cat": "Escudos",
+"es": "Escudo de torre de hierro"
+},
+"ShieldKnight": {
+"cat": "Escudos",
+"es": "Escudo de caballero SIN USAR"
+},
+"ShieldRoots": {
+"cat": "Escudos",
+"es": "Escudo de raíces"
+},
+"ShieldRoundGoldUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: escudo nord"
+},
+"ShieldSerpentscale": {
+"cat": "Escudos",
+"es": "Escudo de escamas de serpiente"
+},
+"ShieldSilver": {
+"cat": "Escudos",
+"es": "Escudo de plata"
+},
+"ShieldTowerGoldUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: gran escudo nord"
+},
+"ShieldWood": {
+"cat": "Escudos",
+"es": "Escudo de madera"
+},
+"ShieldWoodTower": {
+"cat": "Escudos",
+"es": "Escudo de torre de madera"
+},
+"ShocklateSmoothie": {
+"cat": "Comida y pociones",
+"es": "Batilodo"
+},
+"Shovel": {
+"cat": "Armas",
+"es": "Pala de nieve"
+},
+"Silver": {
+"cat": "Materiales",
+"es": "Plata"
+},
+"SilverNecklace": {
+"cat": "Materiales",
+"es": "Collar de plata"
+},
+"SilverOre": {
+"cat": "Materiales",
+"es": "Mena de plata"
+},
+"SizzlingBerryBroth": {
+"cat": "Comida y pociones",
+"es": "Caldo de bayas chisporroteantes"
+},
+"SledgeCheat": {
+"cat": "Armas",
+"es": "Cheat sledge"
+},
+"SledgeDemolisher": {
+"cat": "Armas",
+"es": "Demoledor"
+},
+"SledgeGold": {
+"cat": "Armas",
+"es": "Almádena nord"
+},
+"SledgeGoldUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: almádena nord"
+},
+"SledgeGold_BloodLightning": {
+"cat": "Armas",
+"es": "Almádena de sangre de trueno"
+},
+"SledgeGold_FrostFire": {
+"cat": "Armas",
+"es": "Almádena de fuego gélido"
+},
+"SledgeIron": {
+"cat": "Armas",
+"es": "Mazo de hierro"
+},
+"SledgeStagbreaker": {
+"cat": "Armas",
+"es": "Quebrantaciervos"
+},
+"SledgeWood": {
+"cat": "Armas",
+"es": "Mazo de madera"
+},
+"SmallPartsGoldUncooked": {
+"cat": "Materiales",
+"es": "[item_smallparts_gold_uncooked]"
+},
+"SmokedFish": {
+"cat": "Comida y pociones",
+"es": "Pescado ahumado"
+},
+"SmokedMooseMeat": {
+"cat": "Comida y pociones",
+"es": "Carne de alce ahumada"
+},
+"Snowball": {
+"cat": "Armas",
+"es": "Bola de nieve"
+},
+"SnowballBig": {
+"cat": "Armas",
+"es": "Big Snowball"
+},
+"Softtissue": {
+"cat": "Materiales",
+"es": "Tejido suave"
+},
+"Sparkler": {
+"cat": "Herramientas",
+"es": "Bengala"
+},
+"SparklingShroomshake": {
+"cat": "Comida y pociones",
+"es": "Batido de setas espumoso"
+},
+"SpearBronze": {
+"cat": "Armas",
+"es": "Lanza de bronce"
+},
+"SpearCarapace": {
+"cat": "Armas",
+"es": "Lanza de caparazón"
+},
+"SpearChitin": {
+"cat": "Armas",
+"es": "Arpón abisal"
+},
+"SpearElderbark": {
+"cat": "Armas",
+"es": "Lanza de corteza ancestral"
+},
+"SpearFlint": {
+"cat": "Armas",
+"es": "Lanza de sílex"
+},
+"SpearGold": {
+"cat": "Armas",
+"es": "Lanza nord"
+},
+"SpearGoldUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: lanza nord"
+},
+"SpearGold_BloodLightning": {
+"cat": "Armas",
+"es": "Lanza de sangre de trueno"
+},
+"SpearGold_FrostFire": {
+"cat": "Armas",
+"es": "Lanza de fuego gélido"
+},
+"SpearSplitner": {
+"cat": "Armas",
+"es": "Divisora"
+},
+"SpearSplitner_Blood": {
+"cat": "Armas",
+"es": "Divisora sangrienta"
+},
+"SpearSplitner_Lightning": {
+"cat": "Armas",
+"es": "Divisora tempestuosa"
+},
+"SpearSplitner_Nature": {
+"cat": "Armas",
+"es": "Divisora primigenia"
+},
+"SpearWolfFang": {
+"cat": "Armas",
+"es": "Lanza de colmillo"
+},
+"SpearWood": {
+"cat": "Armas",
+"es": "Lanza de madera"
+},
+"SpiceAshlands": {
+"cat": "Materiales",
+"es": "Polvo de especias picantes"
+},
+"SpiceDeepNorth": {
+"cat": "Materiales",
+"es": "Condimento de la calabaza"
+},
+"SpiceForests": {
+"cat": "Materiales",
+"es": "Mezcla de hierbas de los bosques"
+},
+"SpiceMistlands": {
+"cat": "Materiales",
+"es": "Hierbas de las colinas ocultas"
+},
+"SpiceMountains": {
+"cat": "Materiales",
+"es": "Pimienta en polvo del pico"
+},
+"SpiceOceans": {
+"cat": "Materiales",
+"es": "Hierbas de marinero"
+},
+"SpicePlains": {
+"cat": "Materiales",
+"es": "Cosecha de herbolario de pastizales"
+},
+"SpicyMarmalade": {
+"cat": "Comida y pociones",
+"es": "Mermelada picante"
+},
+"StaffClusterbomb": {
+"cat": "Armas",
+"es": "Báculo Fracturador"
+},
+"StaffFireball": {
+"cat": "Armas",
+"es": "Bastón de Ascuas"
+},
+"StaffFrostOrbs": {
+"cat": "Armas",
+"es": "Venganza del norte"
+},
+"StaffFrostOrbsUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: venganza del norte"
+},
+"StaffGreenRoots": {
+"cat": "Armas",
+"es": "Báculo Silvestre"
+},
+"StaffIceShards": {
+"cat": "Armas",
+"es": "Bastón de la Ventisca"
+},
+"StaffLightning": {
+"cat": "Armas",
+"es": "Dundr"
+},
+"StaffOrbofAhri": {
+"cat": "Armas",
+"es": "Púa de eco"
+},
+"StaffOrbofAhriUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: púa de eco"
+},
+"StaffRedTroll": {
+"cat": "Armas",
+"es": "Trollstav"
+},
+"StaffShield": {
+"cat": "Armas",
+"es": "Báculo de Protección"
+},
+"StaffSkeleton": {
+"cat": "Armas",
+"es": "Levantamuertos"
+},
+"StaffSpiritCaller": {
+"cat": "Armas",
+"es": "Invocador de espíritus"
+},
+"StaffSpiritCallerUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: invocador de espíritus"
+},
+"StaffThunderBlood": {
+"cat": "Armas",
+"es": "Golpe de relámpago"
+},
+"StaffThunderbloodUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: golpe de relámpago"
+},
+"StaminaUpgrade_Greydwarf": {
+"cat": "Comida y pociones",
+"es": "Stamina Greydwarf"
+},
+"StaminaUpgrade_Troll": {
+"cat": "Comida y pociones",
+"es": "Stamina Troll"
+},
+"StaminaUpgrade_Wraith": {
+"cat": "Comida y pociones",
+"es": "Stamina Wraith"
+},
+"Stone": {
+"cat": "Materiales",
+"es": "Piedra"
+},
+"StoneGolem_clubs": {
+"cat": "Armadura",
+"es": "NULL"
+},
+"StoneGolem_hat": {
+"cat": "Armadura",
+"es": "NULL"
+},
+"StoneGolem_spikes": {
+"cat": "Armadura",
+"es": "NULL"
+},
+"StoneRock": {
+"cat": "Materiales",
+"es": "Roca"
+},
+"SulfurStone": {
+"cat": "Materiales",
+"es": "Azufre"
+},
+"SurtlingCore": {
+"cat": "Materiales",
+"es": "Corazón de surtling"
+},
+"Sword2h_JotunWarrior": {
+"cat": "Armas",
+"es": "Club"
+},
+"SwordBlackmetal": {
+"cat": "Armas",
+"es": "Espada de metal negro"
+},
+"SwordBronze": {
+"cat": "Armas",
+"es": "Espada de bronce"
+},
+"SwordCheat": {
+"cat": "Armas",
+"es": "Cheat sword"
+},
+"SwordDyrnwyn": {
+"cat": "Armas",
+"es": "Dyrnwyn"
+},
+"SwordGold": {
+"cat": "Armas",
+"es": "Espada nord"
+},
+"SwordGoldUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: espada nord"
+},
+"SwordGold_BloodLightning": {
+"cat": "Armas",
+"es": "Espada de sangre de trueno"
+},
+"SwordGold_FrostFire": {
+"cat": "Armas",
+"es": "Espada de fuego gélido"
+},
+"SwordIron": {
+"cat": "Armas",
+"es": "Espada de hierro"
+},
+"SwordIronFire": {
+"cat": "Armas",
+"es": "Dyrnwyn"
+},
+"SwordMistwalker": {
+"cat": "Armas",
+"es": "Caminante de la Neblina"
+},
+"SwordNiedhogg": {
+"cat": "Armas",
+"es": "Nidhögg"
+},
+"SwordNiedhoggBlood": {
+"cat": "Armas",
+"es": "Nidhögg sangrienta"
+},
+"SwordNiedhoggLightning": {
+"cat": "Armas",
+"es": "Nidhögg atronadora"
+},
+"SwordNiedhoggNature": {
+"cat": "Armas",
+"es": "Nidhögg primigenia"
+},
+"SwordSilver": {
+"cat": "Armas",
+"es": "Espada de plata"
+},
+"SwordWood": {
+"cat": "Armas",
+"es": "Espada de madera"
+},
+"THSwordGold": {
+"cat": "Armas",
+"es": "Espadón nord"
+},
+"THSwordGoldUncooked": {
+"cat": "Materiales",
+"es": "Pieza fundida: espadón nord"
+},
+"THSwordGold_BloodLightning": {
+"cat": "Armas",
+"es": "Espadón de sangre de trueno"
+},
+"THSwordGold_FrostFire": {
+"cat": "Armas",
+"es": "Espadón de fuego gélido"
+},
+"THSwordKrom": {
+"cat": "Armas",
+"es": "Krom"
+},
+"THSwordSlayer": {
+"cat": "Armas",
+"es": "Asesina"
+},
+"THSwordSlayerBlood": {
+"cat": "Armas",
+"es": "Asesina brutal"
+},
+"THSwordSlayerLightning": {
+"cat": "Armas",
+"es": "Asesina tempestuosa"
+},
+"THSwordSlayerNature": {
+"cat": "Armas",
+"es": "Asesina primigenia"
+},
+"THSwordWood": {
+"cat": "Armas",
+"es": "Espadón de madera"
+},
+"Tankard": {
+"cat": "Armas",
+"es": "Jarra"
+},
+"TankardAnniversary": {
+"cat": "Armas",
+"es": "Cuerno de celebración"
+},
+"TankardOdin": {
+"cat": "Armas",
+"es": "Cuerno de hidromiel de Odín"
+},
+"Tankard_dvergr": {
+"cat": "Armas",
+"es": "Jarra dvergr"
+},
+"Tar": {
+"cat": "Materiales",
+"es": "Brea"
+},
+"Thistle": {
+"cat": "Materiales",
+"es": "Cardo"
+},
+"Thunderstone": {
+"cat": "Materiales",
+"es": "Piedra del trueno"
+},
+"Tin": {
+"cat": "Materiales",
+"es": "Estaño"
+},
+"TinOre": {
+"cat": "Materiales",
+"es": "Mineral de estaño"
+},
+"Torch": {
+"cat": "Herramientas",
+"es": "Antorcha"
+},
+"TorchMist": {
+"cat": "Herramientas",
+"es": "[item_torchmist]"
+},
+"TrinketBlackDamageHealth": {
+"cat": "Accesorios",
+"es": "Brazaletes de Valentía"
+},
+"TrinketBlackStamina": {
+"cat": "Accesorios",
+"es": "Manto de Evasión"
+},
+"TrinketBloodGoldHealth": {
+"cat": "Accesorios",
+"es": "Degollador"
+},
+"TrinketBloodGoldStamina": {
+"cat": "Accesorios",
+"es": "Corona de bruja"
+},
+"TrinketBronzeHealth": {
+"cat": "Accesorios",
+"es": "Corazón del Bosque"
+},
+"TrinketBronzeStamina": {
+"cat": "Accesorios",
+"es": "Colgante de Bronce"
+},
+"TrinketCarapaceEitr": {
+"cat": "Accesorios",
+"es": "Pendientes Pulsantes"
+},
+"TrinketChitinSwim": {
+"cat": "Accesorios",
+"es": "Aletas del Destino"
+},
+"TrinketFlametalEitr": {
+"cat": "Accesorios",
+"es": "Jörmundling "
+},
+"TrinketFlametalStaminaHealth": {
+"cat": "Accesorios",
+"es": "Corazón de fuego"
+},
+"TrinketIronHealth": {
+"cat": "Accesorios",
+"es": "Broche de hierro"
+},
+"TrinketIronStamina": {
+"cat": "Accesorios",
+"es": "Tobillera"
+},
+"TrinketScaleStaminaDamage": {
+"cat": "Accesorios",
+"es": "Grillete resonante"
+},
+"TrinketSilverDamage": {
+"cat": "Accesorios",
+"es": "Vista de lobo"
+},
+"TrinketSilverResist": {
+"cat": "Accesorios",
+"es": "Corazón de cristal"
+},
+"TrollHide": {
+"cat": "Materiales",
+"es": "Piel de trol"
+},
+"TrophyAbomination": {
+"cat": "Trofeos",
+"es": "Trofeo de abominación"
+},
+"TrophyAsksvin": {
+"cat": "Trofeos",
+"es": "Trofeo de cenicerdo"
+},
+"TrophyBarka": {
+"cat": "Trofeos",
+"es": "Trofeo de barka"
+},
+"TrophyBjorn": {
+"cat": "Trofeos",
+"es": "Trofeo de Bjorn"
+},
+"TrophyBjornUndead": {
+"cat": "Trofeos",
+"es": "Trofeo vil"
+},
+"TrophyBlob": {
+"cat": "Trofeos",
+"es": "Trofeo de masa"
+},
+"TrophyBlob_Frost": {
+"cat": "Trofeos",
+"es": "Trofeo de pegote de escarcha"
+},
+"TrophyBlob_Lava": {
+"cat": "Trofeos",
+"es": "Trofeo de pegote de lava"
+},
+"TrophyBlob_Morkhalla": {
+"cat": "Trofeos",
+"es": "Trofeo de pulpa"
+},
+"TrophyBoar": {
+"cat": "Trofeos",
+"es": "Trofeo de jabalí"
+},
+"TrophyBonemass": {
+"cat": "Trofeos",
+"es": "Trofeo de Tuétano"
+},
+"TrophyBonemawSerpent": {
+"cat": "Trofeos",
+"es": "Trofeo de faucesoseas"
+},
+"TrophyCharredArcher": {
+"cat": "Trofeos",
+"es": "Trofeo de arquero"
+},
+"TrophyCharredMage": {
+"cat": "Trofeos",
+"es": "Trofeo de brujo"
+},
+"TrophyCharredMelee": {
+"cat": "Trofeos",
+"es": "Trofeo de guerrero"
+},
+"TrophyCultist": {
+"cat": "Trofeos",
+"es": "Trofeo de cultista"
+},
+"TrophyCultist_Hildir": {
+"cat": "Trofeos",
+"es": "Trofeo de Geirrhafa"
+},
+"TrophyDeathsquito": {
+"cat": "Trofeos",
+"es": "Trofeo de muersquito"
+},
+"TrophyDeer": {
+"cat": "Trofeos",
+"es": "Trofeo de ciervo"
+},
+"TrophyDeerWhite": {
+"cat": "Trofeos",
+"es": "[item_trophy_deer_white]"
+},
+"TrophyDragonQueen": {
+"cat": "Trofeos",
+"es": "Trofeo de Moder"
+},
+"TrophyDraugr": {
+"cat": "Trofeos",
+"es": "Trofeo de draugr"
+},
+"TrophyDraugrElite": {
+"cat": "Trofeos",
+"es": "Trofeo de draugr de élite"
+},
+"TrophyDraugrFem": {
+"cat": "Trofeos",
+"es": "Trofeo de draugr"
+},
+"TrophyDvergr": {
+"cat": "Trofeos",
+"es": "Trofeo de Dvergr"
+},
+"TrophyEikthyr": {
+"cat": "Trofeos",
+"es": "Trofeo de Eikthyr"
+},
+"TrophyElaking": {
+"cat": "Trofeos",
+"es": "Trofeo de elaking"
+},
+"TrophyFader": {
+"cat": "Trofeos",
+"es": "Trofeo de Fader"
+},
+"TrophyFallenValkyrie": {
+"cat": "Trofeos",
+"es": "Trofeo de valquiria caída"
+},
+"TrophyFenring": {
+"cat": "Trofeos",
+"es": "Trofeo de fenring"
+},
+"TrophyForestTroll": {
+"cat": "Trofeos",
+"es": "Trofeo de trol"
+},
+"TrophyFrostTroll": {
+"cat": "Trofeos",
+"es": "Trofeo de trol"
+},
+"TrophyGhost": {
+"cat": "Trofeos",
+"es": "Trofeo de fantasma"
+},
+"TrophyGjall": {
+"cat": "Trofeos",
+"es": "Trofeo de gjall"
+},
+"TrophyGoblin": {
+"cat": "Trofeos",
+"es": "Trofeo de fuling"
+},
+"TrophyGoblinBrute": {
+"cat": "Trofeos",
+"es": "Trofeo de fuling berserker"
+},
+"TrophyGoblinBruteBrosBrute": {
+"cat": "Trofeos",
+"es": "Trofeo de Thungr"
+},
+"TrophyGoblinBruteBrosShaman": {
+"cat": "Trofeos",
+"es": "Trofeo de Zil"
+},
+"TrophyGoblinKing": {
+"cat": "Trofeos",
+"es": "Trofeo de Yagluth"
+},
+"TrophyGoblinShaman": {
+"cat": "Trofeos",
+"es": "Trofeo de fuling chamán"
+},
+"TrophyGreydwarf": {
+"cat": "Trofeos",
+"es": "Trofeo de grisucio"
+},
+"TrophyGreydwarfBrute": {
+"cat": "Trofeos",
+"es": "Trofeo de grisucio bárbaro"
+},
+"TrophyGreydwarfShaman": {
+"cat": "Trofeos",
+"es": "Trofeo del grisucio chamán"
+},
+"TrophyGrowth": {
+"cat": "Trofeos",
+"es": "Trofeo del bulto"
+},
+"TrophyHare": {
+"cat": "Trofeos",
+"es": "Trofeo de liebre"
+},
+"TrophyHatchling": {
+"cat": "Trofeos",
+"es": "Trofeo de draco"
+},
+"TrophyJotunWarrior": {
+"cat": "Trofeos",
+"es": "Trofeo de Krigen"
+},
+"TrophyJotunWitch": {
+"cat": "Trofeos",
+"es": "Trofeo de Hexen"
+},
+"TrophyKvastur": {
+"cat": "Trofeos",
+"es": "Kvastur"
+},
+"TrophyLeech": {
+"cat": "Trofeos",
+"es": "Trofeo de sanguijuela"
+},
+"TrophyLox": {
+"cat": "Trofeos",
+"es": "Trofeo de luey"
+},
+"TrophyMole": {
+"cat": "Trofeos",
+"es": "Trofeo de sin ojos"
+},
+"TrophyMoose": {
+"cat": "Trofeos",
+"es": "Trofeo de alce"
+},
+"TrophyMorgen": {
+"cat": "Trofeos",
+"es": "Trofeo de Morgen"
+},
+"TrophyNeck": {
+"cat": "Trofeos",
+"es": "Trofeo de nixe"
+},
+"TrophySGolem": {
+"cat": "Trofeos",
+"es": "Trofeo de gólem de piedra"
+},
+"TrophySeal": {
+"cat": "Trofeos",
+"es": "Trofeo de foca"
+},
+"TrophySeeker": {
+"cat": "Trofeos",
+"es": "Trofeo de buscador"
+},
+"TrophySeekerBrute": {
+"cat": "Trofeos",
+"es": "Trofeo de buscador soldado"
+},
+"TrophySeekerQueen": {
+"cat": "Trofeos",
+"es": "Trofeo de La Reina"
+},
+"TrophySerpent": {
+"cat": "Trofeos",
+"es": "Trofeo de serpiente"
+},
+"TrophySkeleton": {
+"cat": "Trofeos",
+"es": "Trofeo de esqueleto"
+},
+"TrophySkeletonHildir": {
+"cat": "Trofeos",
+"es": "Trofeo de Brenna"
+},
+"TrophySkeletonPoison": {
+"cat": "Trofeos",
+"es": "Trofeo de restos rancios"
+},
+"TrophySurtling": {
+"cat": "Trofeos",
+"es": "Trofeo de surtling"
+},
+"TrophyTheElder": {
+"cat": "Trofeos",
+"es": "Trofeo del Sabio"
+},
+"TrophyTick": {
+"cat": "Trofeos",
+"es": "Trofeo de garrapata"
+},
+"TrophyUlv": {
+"cat": "Trofeos",
+"es": "Trofeo de Ulv"
+},
+"TrophyVolture": {
+"cat": "Trofeos",
+"es": "Trofeo de buicán"
+},
+"TrophyWolf": {
+"cat": "Trofeos",
+"es": "Trofeo de lobo"
+},
+"TrophyWraith": {
+"cat": "Trofeos",
+"es": "Trofeo del espectro"
+},
+"TrophyWrithan": {
+"cat": "Trofeos",
+"es": "Trofeo de writhan"
+},
+"Turnip": {
+"cat": "Materiales",
+"es": "Nabo"
+},
+"TurnipSeeds": {
+"cat": "Materiales",
+"es": "Semillas de nabo"
+},
+"TurnipStew": {
+"cat": "Comida y pociones",
+"es": "Cocido de nabos"
+},
+"TurretBolt": {
+"cat": "Otros",
+"es": "Proyectil de metal negro"
+},
+"TurretBoltBloodgold": {
+"cat": "Otros",
+"es": "Proyectil de oro sanguino"
+},
+"TurretBoltBone": {
+"cat": "Otros",
+"es": "[item_turretboltbone]"
+},
+"TurretBoltFlametal": {
+"cat": "Otros",
+"es": "Misil de llametal"
+},
+"TurretBoltWood": {
+"cat": "Otros",
+"es": "Proyectil de madera"
+},
+"UndeadBjornRibcage": {
+"cat": "Materiales",
+"es": "Vile Ribcage"
+},
+"Upgrader0Armor": {
+"cat": "Materiales",
+"es": "Wooden Protection Idol"
+},
+"Upgrader0Weapon": {
+"cat": "Materiales",
+"es": "Wooden Battle Idol"
+},
+"Upgrader1Armor": {
+"cat": "Materiales",
+"es": "Bronze Protection Idol"
+},
+"Upgrader1Weapon": {
+"cat": "Materiales",
+"es": "Bronze Battle Idol"
+},
+"Upgrader2Armor": {
+"cat": "Materiales",
+"es": "Iron Protection Idol"
+},
+"Upgrader2Weapon": {
+"cat": "Materiales",
+"es": "Iron Battle Idol"
+},
+"Upgrader3Armor": {
+"cat": "Materiales",
+"es": "Silver Protection Idol"
+},
+"Upgrader3Weapon": {
+"cat": "Materiales",
+"es": "Silver Battle Idol"
+},
+"Upgrader4Armor": {
+"cat": "Materiales",
+"es": "Black Metal Protection Idol"
+},
+"Upgrader4Weapon": {
+"cat": "Materiales",
+"es": "Black Metal Battle Idol"
+},
+"Upgrader5Armor": {
+"cat": "Materiales",
+"es": "Black Marble Protection Idol"
+},
+"Upgrader5Weapon": {
+"cat": "Materiales",
+"es": "Black Marble Battle Idol"
+},
+"Upgrader6Armor": {
+"cat": "Materiales",
+"es": "Flametal Protection Idol"
+},
+"Upgrader6Weapon": {
+"cat": "Materiales",
+"es": "Flametal Battle Idol"
+},
+"Upgrader7Armor": {
+"cat": "Materiales",
+"es": "Bloodgold Protection Idol"
+},
+"Upgrader7Weapon": {
+"cat": "Materiales",
+"es": "Bloodgold Battle Idol"
+},
+"VegvisirShard_Bonemass": {
+"cat": "Materiales",
+"es": "Yagluth thing"
+},
+"VikingCupcake": {
+"cat": "Comida y pociones",
+"es": "Pan dulce escarchado"
+},
+"VikingCupcakeUncooked": {
+"cat": "Materiales",
+"es": "Pan dulce sin hornear"
+},
+"VineGreenSeeds": {
+"cat": "Materiales",
+"es": "Semillas de hiedra"
+},
+"Vineberry": {
+"cat": "Comida y pociones",
+"es": "Racimo de parrabaya"
+},
+"VineberrySeeds": {
+"cat": "Materiales",
+"es": "Semillas de enredadera de ceniza"
+},
+"Voidplasm": {
+"cat": "Materiales",
+"es": "Ectoplasma"
+},
+"VoltureEgg": {
+"cat": "Otros",
+"es": "Huevo de buicán"
+},
+"VoltureMeat": {
+"cat": "Materiales",
+"es": "Carne de buicán"
+},
+"Wishbone": {
+"cat": "Accesorios",
+"es": "Fúrcula"
+},
+"Wisp": {
+"cat": "Materiales",
+"es": "Wisp"
+},
+"WitheredBone": {
+"cat": "Materiales",
+"es": "Hueso pálido"
+},
+"WolfClaw": {
+"cat": "Materiales",
+"es": "Garra de Fenris"
+},
+"WolfFang": {
+"cat": "Materiales",
+"es": "Colmillo de lobo"
+},
+"WolfHairBundle": {
+"cat": "Materiales",
+"es": "Pelo de Fenris"
+},
+"WolfJerky": {
+"cat": "Comida y pociones",
+"es": "Cecina de lobo"
+},
+"WolfMeat": {
+"cat": "Materiales",
+"es": "Carne de lobo"
+},
+"WolfMeatSkewer": {
+"cat": "Comida y pociones",
+"es": "Pincho de lobo"
+},
+"WolfPelt": {
+"cat": "Materiales",
+"es": "Piel de lobo"
+},
+"Wood": {
+"cat": "Materiales",
+"es": "Madera"
+},
+"WrithanRoots": {
+"cat": "Materiales",
+"es": "Raíces de writhan"
+},
+"YagluthDrop": {
+"cat": "Otros",
+"es": "Espíritu destrozado"
+},
+"YggdrasilPorridge": {
+"cat": "Comida y pociones",
+"es": "Papilla de Yggdrasil"
+},
+"YggdrasilWood": {
+"cat": "Materiales",
+"es": "Madera de Yggdrasil"
+},
+"YmirRemains": {
+"cat": "Materiales",
+"es": "Carne de Ymir"
+},
+"charred_bow": {
+"cat": "Armas",
+"es": "Bow"
+},
+"charred_bow_Fader": {
+"cat": "Armas",
+"es": "Bow"
+},
+"charred_bow_volley": {
+"cat": "Armas",
+"es": "Bow"
+},
+"charred_bow_volley_Fader": {
+"cat": "Armas",
+"es": "Bow"
+},
+"charred_dyrnwyn_greatsword_feint": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"charred_dyrnwyn_greatsword_swing": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"charred_dyrnwyn_greatsword_thrust": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"charred_dyrnwyn_greatsword_thrustfeint": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"charred_fader_greatsword_feint": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"charred_fader_greatsword_swing": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"charred_fader_greatsword_thrust": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"charred_fader_greatsword_thrustfeint": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"charred_greatsword_feint": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"charred_greatsword_swing": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"charred_greatsword_thrust": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"charred_greatsword_thrustfeint": {
+"cat": "Armas",
+"es": "Charred Sword"
+},
+"charred_magestaff_fire": {
+"cat": "Armas",
+"es": "Bow"
+},
+"charred_magestaff_summon": {
+"cat": "Armas",
+"es": "Bow"
+},
+"charred_twitcher_throw": {
+"cat": "Armas",
+"es": "Bow"
+},
+"chest_hildir1": {
+"cat": "Otros",
+"es": "Cofre de latón de Hildir"
+},
+"chest_hildir2": {
+"cat": "Otros",
+"es": "Cofre de plata de Hildir"
+},
+"chest_hildir3": {
+"cat": "Otros",
+"es": "Cofre de bronce de Hildir"
+},
+"draugr_arrow": {
+"cat": "Flechas",
+"es": "Ironhead arrow"
+},
+"draugr_axe": {
+"cat": "Armas",
+"es": "Dragur axe"
+},
+"draugr_bow": {
+"cat": "Armas",
+"es": "Bow"
+},
+"draugr_sword": {
+"cat": "Armas",
+"es": "Dragur axe"
+},
+"skeleton_bow": {
+"cat": "Armas",
+"es": "Bow"
+},
+"skeleton_bow2": {
+"cat": "Armas",
+"es": "Bow"
+},
+"skeleton_bow_meadows": {
+"cat": "Armas",
+"es": "Bow"
+},
+"skeleton_bow_mountains": {
+"cat": "Armas",
+"es": "Bow"
+},
+"skeleton_bow_swamps": {
+"cat": "Armas",
+"es": "Bow"
+},
+"skeleton_hildir_firenova": {
+"cat": "Armas",
+"es": "Fire Skeleton Sword"
+},
+"skeleton_mace": {
+"cat": "Armas",
+"es": "Dragur axe"
+},
+"skeleton_mace_DeepNorth": {
+"cat": "Armas",
+"es": "Dragur axe"
+},
+"skeleton_sword": {
+"cat": "Armas",
+"es": "Dragur axe"
+},
+"skeleton_sword2": {
+"cat": "Armas",
+"es": "Dragur axe"
+},
+"skeleton_sword_hildir": {
+"cat": "Armas",
+"es": "Fire Skeleton Sword"
+},
+"skeleton_sword_meadows": {
+"cat": "Armas",
+"es": "Dragur axe"
+},
+"skeleton_sword_mountains": {
+"cat": "Armas",
+"es": "Dragur axe"
+},
+"skeleton_sword_swamps": {
+"cat": "Armas",
+"es": "Dragur axe"
+},
+"troll_log_swing_h": {
+"cat": "Armas",
+"es": "LOG"
+},
+"troll_log_swing_v": {
+"cat": "Armas",
+"es": "LOG"
+},
+"troll_summoned_log_swing_h": {
+"cat": "Armas",
+"es": "LOG"
+},
+"troll_summoned_log_swing_v": {
+"cat": "Armas",
+"es": "LOG"
+}
+}
