@@ -11,7 +11,7 @@ Páginas de nuestros mundos de Valheim, una carpeta por mundo:
 
 Página con todo lo guardado en los cofres, vehículos y tumbas del mundo de
 Valheim `pancheim`, más el estado de fermentadores, fundiciones y hornos. Se
-arma sola cada 2 horas: una acción de GitHub baja el mundo por FTP desde
+arma sola cada 30 minutos: una acción de GitHub baja el mundo por FTP desde
 G-Portal, lo lee y publica la página en GitHub Pages.
 
 No incluye lo que cada jugador lleva encima: eso vive en la PC de cada uno, no
@@ -40,6 +40,9 @@ La página queda en `https://kvothesson.com/valheim/pancheim/` (GitHub Pages usa
 
 ## Cosas a saber
 
+- Si el servidor no guardó desde la última corrida, la corrida programada termina
+  sin republicar (compara con `pancheim/save.txt`). A mano o al subir código se
+  arma siempre.
 - GitHub pausa las tareas programadas si el repositorio pasa 60 días sin
   actividad. Se reactivan desde la pestaña Actions.
 - La "base" es todo lo que está a menos de 150 m de (1290, -195). Se cambia

@@ -117,6 +117,11 @@ def main(world_dir, out_path):
     payload = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     os.makedirs(out_dir, exist_ok=True)
     open(out_path, "w", encoding="utf-8").write(template.replace("__DATA__", payload))
+    # Numero del guardado publicado, para que el workflow no republique si no cambio.
+    mains = glob.glob(os.path.join(world_dir, "_main.*.ok"))
+    if mains:
+        latest = max(int(os.path.basename(m).split(".")[1]) for m in mains)
+        open(os.path.join(out_dir, "save.txt"), "w").write(f"{latest}\n")
     print(f"{len(data['containers'])} contenedores, {len(data['stations'])} estaciones, "
           f"{len(data['names'])} items distintos; guardado {data['saved']} -> {out_path}")
 

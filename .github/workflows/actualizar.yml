@@ -2,7 +2,7 @@ name: Actualizar inventario
 
 on:
   schedule:
-    - cron: "17 */2 * * *"   # cada 2 horas (UTC); GitHub puede demorarlo unos minutos
+    - cron: "7,37 * * * *"   # cada 30 minutos; GitHub puede demorarlo unos minutos
   workflow_dispatch:          # boton "Run workflow" para actualizar a mano
   push:
     branches: [main]
@@ -19,13 +19,23 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      skip: ${{ steps.fetch.outputs.skip }}
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      # En las corridas programadas, si el servidor no guardó desde la última vez, no se republica.
+      # A mano (Run workflow) o al subir cambios de código se arma siempre.
+      - name: Ver qué guardado está publicado
+        id: pub
+        if: github.event_name == 'schedule'
+        run: echo "save=$(curl -fsL https://kvothesson.github.io/valheim/pancheim/save.txt || true)" >> "$GITHUB_OUTPUT"
       - name: Bajar el mundo desde G-Portal
+        id: fetch
         env:
+          PUBLISHED_SAVE: ${{ steps.pub.outputs.save }}
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_PORT: ${{ secrets.FTP_PORT }}
           FTP_USER: ${{ secrets.FTP_USER }}
@@ -34,22 +44,27 @@ jobs:
           FTP_WORLD_DIR: ${{ secrets.FTP_WORLD_DIR }}
         run: python arcon/fetch_ftp.py world
       - name: Cache de iconos
+        if: steps.fetch.outputs.skip != 'true'
         uses: actions/cache@v4
         with:
           path: .icons
           key: iconos-${{ github.run_id }}
           restore-keys: iconos-
       - name: Armar la pagina
+        if: steps.fetch.outputs.skip != 'true'
         run: |
           python arcon/build.py world site/pancheim/index.html
           cp index.html site/index.html
       - uses: actions/configure-pages@v5
+        if: steps.fetch.outputs.skip != 'true'
       - uses: actions/upload-pages-artifact@v3
+        if: steps.fetch.outputs.skip != 'true'
         with:
           path: site
 
   deploy:
     needs: build
+    if: needs.build.outputs.skip != 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

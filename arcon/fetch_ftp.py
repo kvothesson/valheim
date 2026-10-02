@@ -6,6 +6,8 @@ Lee la configuracion de variables de entorno (en GitHub van como secretos):
   FTP_TLS                          "1" para FTPS explicito
   FTP_WORLD_DIR                    carpeta del mundo en el servidor,
                                    por defecto save/worlds_local/gportal_unzip_ppqaovp_
+  PUBLISHED_SAVE                   numero del guardado ya publicado; si es el mismo
+                                   que el del servidor, no baja nada y avisa skip=true
 
 Uso: python arcon/fetch_ftp.py <carpeta_destino>
 """
@@ -25,6 +27,14 @@ def list_files(ftp):
     lines = []
     ftp.retrlines("LIST", lines.append)
     return [l.split(None, 8)[-1] for l in lines if l and not l.startswith(("d", "total"))]
+
+
+def set_output(key, value):
+    """Deja un valor para los pasos siguientes del workflow (no hace nada fuera de GitHub)."""
+    path = os.environ.get("GITHUB_OUTPUT")
+    if path:
+        with open(path, "a") as f:
+            f.write(f"{key}={value}\n")
 
 
 def main(dest):
@@ -48,7 +58,15 @@ def main(dest):
     if not mains:
         sys.exit(f"No hay archivos _main en {remote}: revisa FTP_WORLD_DIR.")
     latest = max(int(n.split(".")[1]) for n in mains)
-    wanted = [n for n in names if n.endswith(".chunk") or n.startswith(f"_main.{latest}.")]
+    published = os.environ.get("PUBLISHED_SAVE", "").strip()
+    if published == str(latest):
+        # Mismo guardado que la pagina publicada: no hay nada nuevo que mostrar.
+        ftp.quit()
+        print(f"El guardado {latest} ya está publicado; no se actualiza.")
+        set_output("skip", "true")
+        return
+    set_output("skip", "false")
+    wanted =[n for n in names if n.endswith(".chunk") or n.startswith(f"_main.{latest}.")]
     for n in wanted:
         path = os.path.join(dest, n)
         with open(path, "wb") as f:
