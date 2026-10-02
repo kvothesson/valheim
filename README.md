@@ -31,9 +31,9 @@ La página queda en la dirección de GitHub Pages del repositorio (ver Settings 
 
 ## Cosas a saber
 
-- Si el servidor no guardó desde la última corrida, la corrida programada termina
-  sin republicar (compara con `save.txt` de la página publicada). A mano o al subir código se
-  arma siempre.
+- El servidor guarda aunque nadie juegue, así que la corrida programada compara
+  el contenido (cofres, estaciones y plano) con el publicado (`estado.txt`) y,
+  si es igual, no republica. A mano o al subir código se arma siempre.
 - GitHub pausa las tareas programadas si el repositorio pasa 60 días sin
   actividad. Se reactivan desde la pestaña Actions.
 - La "base" es todo lo que está a menos de 150 m de (1290, -195). Se cambia

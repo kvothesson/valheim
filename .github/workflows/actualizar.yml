@@ -20,7 +20,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      skip: ${{ steps.fetch.outputs.skip }}
+      skip: ${{ steps.diff.outputs.skip }}
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -28,16 +28,8 @@ jobs:
           python-version: "3.12"
       - id: pages
         uses: actions/configure-pages@v5
-      # En las corridas programadas, si el servidor no guardó desde la última vez, no se republica.
-      # A mano (Run workflow) o al subir cambios de código se arma siempre.
-      - name: Ver qué guardado está publicado
-        id: pub
-        if: github.event_name == 'schedule'
-        run: echo "save=$(curl -fsL '${{ steps.pages.outputs.base_url }}/save.txt' || true)" >> "$GITHUB_OUTPUT"
       - name: Bajar el mundo desde G-Portal
-        id: fetch
         env:
-          PUBLISHED_SAVE: ${{ steps.pub.outputs.save }}
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_PORT: ${{ secrets.FTP_PORT }}
           FTP_USER: ${{ secrets.FTP_USER }}
@@ -46,17 +38,27 @@ jobs:
           FTP_WORLD_DIR: ${{ secrets.FTP_WORLD_DIR }}
         run: python arcon/fetch_ftp.py world
       - name: Cache de iconos
-        if: steps.fetch.outputs.skip != 'true'
         uses: actions/cache@v4
         with:
           path: .icons
           key: iconos-${{ github.run_id }}
           restore-keys: iconos-
       - name: Armar la pagina
-        if: steps.fetch.outputs.skip != 'true'
         run: python arcon/build.py world site/index.html
+      # En las corridas programadas, si cofres, estaciones y plano son iguales a lo publicado,
+      # no se republica (el servidor guarda aunque nadie juegue). A mano o al subir codigo, siempre.
+      - name: Ver si cambio algo
+        id: diff
+        run: |
+          nuevo=$(cat site/estado.txt)
+          publicado=$(curl -fsL '${{ steps.pages.outputs.base_url }}/estado.txt' || true)
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$nuevo" = "$publicado" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"; echo "Sin cambios desde la ultima publicacion: no se republica."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/upload-pages-artifact@v3
-        if: steps.fetch.outputs.skip != 'true'
+        if: steps.diff.outputs.skip != 'true'
         with:
           path: site
 

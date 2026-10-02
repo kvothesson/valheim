@@ -4,6 +4,7 @@ Uso: python arcon/build.py <carpeta_del_mundo> <salida.html>
 """
 import collections
 import glob
+import hashlib
 import json
 import os
 import re
@@ -117,11 +118,9 @@ def main(world_dir, out_path):
     payload = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     os.makedirs(out_dir, exist_ok=True)
     open(out_path, "w", encoding="utf-8").write(template.replace("__DATA__", payload))
-    # Numero del guardado publicado, para que el workflow no republique si no cambio.
-    mains = glob.glob(os.path.join(world_dir, "_main.*.ok"))
-    if mains:
-        latest = max(int(os.path.basename(m).split(".")[1]) for m in mains)
-        open(os.path.join(out_dir, "save.txt"), "w").write(f"{latest}\n")
+    # Huella del contenido (sin horas): el workflow no republica si es igual a la publicada.
+    content = json.dumps({k: data[k] for k in ("containers", "stations", "plan", "names")}, sort_keys=True)
+    open(os.path.join(out_dir, "estado.txt"), "w").write(hashlib.sha256(content.encode()).hexdigest() + "\n")
     print(f"{len(data['containers'])} contenedores, {len(data['stations'])} estaciones, "
           f"{len(data['names'])} items distintos; guardado {data['saved']} -> {out_path}")
 

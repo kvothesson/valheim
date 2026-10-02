@@ -195,7 +195,7 @@ const TZ = { timeZone: "America/Argentina/Buenos_Aires" };
 const when = d => `${d.toLocaleDateString("es-AR", {...TZ, day: "numeric", month: "long"})}, ${d.toLocaleTimeString("es-AR", {...TZ, hour: "2-digit", minute: "2-digit"})}`;
 document.getElementById("meta").innerHTML =
   `<span>Guardado del servidor: <b>${when(saved)}</b></span>` +
-  `<span>Actualizado: ${when(new Date(D.built))}</span>` +
+  `<span>Último cambio publicado: ${when(new Date(D.built))}</span>` +
   `<span><b>${D.containers.filter(c => c.kind !== "Tumba").length}</b> cofres y vehículos</span>` +
   `<span><b>${D.containers.filter(c => c.kind === "Tumba").length}</b> tumbas</span>`;
 
