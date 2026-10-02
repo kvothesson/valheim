@@ -117,37 +117,6 @@ header.panel { padding: 18px 20px 16px; display: grid; gap: 6px; }
 .chest li { display: flex; justify-content: space-between; align-items: center; gap: 10px; border-top: 1px solid rgba(255, 214, 160, .07); padding-top: 3px; }
 .note { color: var(--muted); font: .88rem var(--ui); max-width: 65ch; margin: 0; }
 
-/* Map: world disc like the in-game map, chests as pins. x grows east (right), z grows north (up). */
-.mapbox { padding: 12px; display: grid; gap: 10px; }
-.map-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-.map-tools .hint { color: var(--muted); font: .82rem var(--ui); margin-left: auto; }
-.map { position: relative; width: 100%; aspect-ratio: 4 / 3; max-height: 70vh; border: 2px solid var(--frame); border-radius: 3px;
-  background: #0d1418; overflow: hidden; touch-action: none; cursor: grab; box-shadow: inset 0 0 30px rgba(0, 0, 0, .8); }
-.map:active { cursor: grabbing; }
-.map svg { width: 100%; height: 100%; display: block; }
-.map .sea { fill: #1b2a30; }
-.map .edge { fill: none; stroke: #4a3a2a; }
-.map .ring { fill: none; stroke: rgba(196, 174, 143, .16); }
-.map .ring-l { fill: rgba(196, 174, 143, .45); font-family: var(--ui); }
-.map .zone { fill: rgba(188, 127, 49, .08); stroke: rgba(188, 127, 49, .5); stroke-dasharray: 4 4; }
-.pin { cursor: pointer; stroke: #120c08; }
-.pin.cofre { fill: var(--amber); }
-.pin.vehiculo { fill: #8fc3d6; }
-.pin.tumba { fill: #d0675a; }
-.pin.dim { opacity: .22; }
-.pin.hit { fill: var(--gold); stroke: #fff3c4; }
-.pin.sel { stroke: #fff; }
-.legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font: .82rem var(--ui); color: var(--muted); }
-.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; border: 1px solid #120c08; vertical-align: -1px; }
-.picked { padding: 10px 12px; background: rgba(0, 0, 0, .25); border-radius: 3px; display: grid; gap: 6px; }
-.picked .top { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; }
-.picked ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 3px 18px; font: .9rem var(--ui); }
-.picked li { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
-.ext { color: var(--amber); font: .85rem var(--ui); }
-.ext:hover, .ext:focus-visible { color: var(--gold); }
-.tolink { all: unset; cursor: pointer; color: var(--amber); font: .85rem var(--ui); }
-.tolink:hover, .tolink:focus-visible { color: var(--gold); text-decoration: underline; }
-
 @media (max-width: 640px) {
   .ledger-head, .item > summary { grid-template-columns: minmax(0, 1fr) 72px 44px; }
   .ledger-head .c, .item .cat { display: none; }
@@ -164,22 +133,6 @@ header.panel { padding: 18px 20px 16px; display: grid; gap: 6px; }
     <h1>Arcón de Pancheim</h1>
     <div class="meta" id="meta"></div>
   </header>
-
-  <section aria-labelledby="h-map" style="display:grid;gap:12px">
-    <h2 id="h-map">Mapa</h2>
-    <div class="mapbox panel">
-      <div class="map-tools">
-        <button class="chip" id="v-world">Mundo</button>
-        <button class="chip" id="v-base">Base</button>
-        <button class="chip" id="v-in" aria-label="Acercar">+</button>
-        <button class="chip" id="v-out" aria-label="Alejar">−</button>
-        <span class="hint">Arrastrá para moverte, rueda para zoom. Buscá un item abajo y se marcan sus cofres.</span>
-      </div>
-      <div class="map" id="map"><svg id="svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa del mundo con la ubicación de cofres, vehículos y tumbas"></svg></div>
-      <div class="legend"><span><i style="background:var(--amber)"></i>Cofre</span><span><i style="background:#8fc3d6"></i>Carro o barco</span><span><i style="background:#d0675a"></i>Tumba</span><span><i style="background:var(--gold)"></i>Tiene lo que buscás</span><span id="real-world"></span></div>
-      <div class="picked" id="picked">Tocá un punto para ver qué tiene.</div>
-    </div>
-  </section>
 
   <section aria-labelledby="h-led" style="display:grid;gap:12px">
     <h2 id="h-led">Todo lo guardado</h2>
@@ -278,7 +231,6 @@ function renderList() {
     (state.cat === "Todo" || C(e.p) === state.cat) && (!q || norm(N(e.p)).includes(q) || norm(e.p).includes(q)));
   const key = { name: e => N(e.p), cat: e => C(e.p), total: e => e.total, places: e => e.at.size }[state.sort];
   rows.sort((a, b) => { const x = key(a), y = key(b); return (typeof x === "string" ? x.localeCompare(y, "es") : x - y) * state.dir || N(a.p).localeCompare(N(b.p), "es"); });
-  if (typeof updateHits === "function") updateHits();
   const el = document.getElementById("list");
   if (!rows.length) { el.innerHTML = `<div class="empty">No hay nada que coincida. Probá otra palabra o activá más lugares en “Dónde”.</div>`; return; }
   el.innerHTML = rows.map(e => {
@@ -299,125 +251,18 @@ document.getElementById("stations").innerHTML = D.stations
   .map(s => `<div class="st panel"><span class="k">${s.kind}</span><span class="d${s.detail === "Vacío" ? "" : " active"}">${s.detail}</span><span class="coord">${s.x}, ${s.z}</span></div>`).join("");
 
 const order = { base: 0, afuera: 1, tumbas: 2 };
-document.getElementById("chests").innerHTML = D.containers.map((c, i) => ({ ...c, i }))
+document.getElementById("chests").innerHTML = [...D.containers]
   .sort((a, b) => order[where(a)] - order[where(b)] || a.x - b.x || a.z - b.z)
   .map(c => {
     const agg = new Map(); for (const [p, s, q] of c.items) { const k = p + "|" + q; agg.set(k, (agg.get(k) || 0) + s); }
     const list = [...agg.entries()].map(([k, n]) => { const [p, q] = k.split("|"); return [icon(p, "sm") + `<span>${N(p)}${q > 1 ? ` (nv. ${q})` : ""}</span>`, n, N(p)]; }).sort((a, b) => b[1] - a[1]);
     const label = { base: "Base", afuera: "Afuera", tumbas: "Tumba" }[where(c)];
     return `<details class="chest panel"><summary><span class="k">${c.kind}</span><span class="coord">${label} · ${c.x}, ${c.z}</span>` +
-      `<span class="s">${list.slice(0, 4).map(x => x[2]).join(", ")}${list.length > 4 ? ` y ${list.length - 4} más` : ""}</span>` +
-      `<button class="tolink" data-show="${c.i}">Ver en el mapa</button></summary>` +
+      `<span class="s">${list.slice(0, 4).map(x => x[2]).join(", ")}${list.length > 4 ? ` y ${list.length - 4} más` : ""}</span></summary>` +
       `<ul>${list.map(([n, k]) => `<li><span class="name" style="display:flex;align-items:center;gap:8px;min-width:0">${n}</span><span class="num">${fmt(k)}</span></li>`).join("")}</ul></details>`;
   }).join("");
 
-
-// ---------- Mapa ----------
-const SVGNS = "http://www.w3.org/2000/svg";
-const svg = document.getElementById("svg"), mapEl = document.getElementById("map");
-const EDGE = 10500;
-const realMap = (x, z, zoom = 0.12) => D.seed ? `https://valheim-map.world/?seed=${encodeURIComponent(D.seed)}&offset=${Math.round(x)}%2C${Math.round(z)}&zoom=${zoom.toFixed(3)}&view=0&ver=1.0.7` : "";
-const kindClass = c => c.kind === "Tumba" ? "tumba" : (["Carro", "Karve", "Drakkar"].includes(c.kind) ? "vehiculo" : "cofre");
-const HOME = { cx: D.base.x, cz: D.base.z, half: 70 };
-let view = { ...HOME }, selected = -1, hits = null;
-if (D.seed) document.getElementById("real-world").innerHTML = `<a class="ext" href="${realMap(D.base.x, D.base.z, 1)}" target="_blank" rel="noopener">Ver el terreno en valheim-map.world ↗</a>`;
-
-// Tamano del mapa en pixeles; si la pagina todavia no tiene layout (pestana oculta), uno razonable.
-const msize = () => { const w = mapEl.clientWidth || 800; return [w, mapEl.clientHeight || w * 0.75]; };
-function el(tag, attrs, parent) { const e = document.createElementNS(SVGNS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent.appendChild(e); return e; }
-function drawMap() {
-  const [w, h] = msize(), mpp = (2 * view.half) / w;  // metros por pixel
-  const vh = view.half * h / w;
-  svg.setAttribute("viewBox", `${view.cx - view.half} ${-view.cz - vh} ${2 * view.half} ${2 * vh}`);
-  svg.textContent = "";
-  el("circle", { cx: 0, cy: 0, r: EDGE, class: "sea" }, svg);
-  // anillos de distancia: elegimos un paso que deje 3-6 anillos en pantalla
-  const step = [10, 25, 50, 100, 250, 500, 1000, 2500].find(s => view.half / s <= 6) || 2500;
-  const far = Math.hypot(Math.abs(view.cx) + view.half, Math.abs(view.cz) + vh);
-  const near = Math.max(0, Math.hypot(view.cx, view.cz) - Math.hypot(view.half, vh));
-  for (let r = Math.max(step, Math.floor(near / step) * step); r <= Math.min(far, EDGE); r += step) {
-    el("circle", { cx: 0, cy: 0, r, class: "ring", "stroke-width": mpp }, svg);
-  }
-  el("circle", { cx: 0, cy: 0, r: EDGE, class: "edge", "stroke-width": 3 * mpp }, svg);
-  el("circle", { cx: D.base.x, cy: -D.base.z, r: D.base.r, class: "zone", "stroke-width": mpp }, svg);
-  const lbl = el("text", { x: view.cx - view.half + 8 * mpp, y: -view.cz + vh - 8 * mpp, class: "ring-l", "font-size": 11 * mpp }, svg);
-  lbl.textContent = `anillos cada ${step >= 1000 ? step / 1000 + " km" : step + " m"} desde el centro del mundo`;
-  const r = (view.half < 300 ? 6 : 4.5) * mpp;
-  D.containers.forEach((c, i) => {
-    const cls = ["pin", kindClass(c)];
-    if (hits) cls.push(hits.has(i) ? "hit" : "dim");
-    if (i === selected) cls.push("sel");
-    const pin = el("circle", { cx: c.x, cy: -c.z, r: i === selected || (hits && hits.has(i)) ? r * 1.35 : r, class: cls.join(" "), "stroke-width": 1.5 * mpp, "data-i": i }, svg);
-    const t = el("title", {}, pin); t.textContent = `${c.kind} · ${c.x}, ${c.z}`;
-  });
-}
-function pick(i) {
-  selected = i; drawMap();
-  const box = document.getElementById("picked");
-  if (i < 0) { box.textContent = "Tocá un punto para ver qué tiene."; return; }
-  const c = D.containers[i];
-  const agg = new Map(); for (const [p, s, q] of c.items) { const k = p + "|" + q; agg.set(k, (agg.get(k) || 0) + s); }
-  const list = [...agg.entries()].map(([k, n]) => { const [p, q] = k.split("|"); return [p, +q, n]; }).sort((a, b) => b[2] - a[2]);
-  box.innerHTML = `<div class="top"><span class="k" style="font-weight:700;color:var(--amber)">${c.kind}</span><span class="coord">${c.x}, ${c.z}</span>` +
-    (D.seed ? `<a class="ext" href="${realMap(c.x, c.z)}" target="_blank" rel="noopener">Ver en el mapa real ↗</a>` : "") + `</div>` +
-    `<ul>${list.map(([p, q, n]) => `<li><span style="display:flex;align-items:center;gap:8px;min-width:0">${icon(p, "sm")}<span>${N(p)}${q > 1 ? ` (nv. ${q})` : ""}</span></span><span class="num">${fmt(n)}</span></li>`).join("")}</ul>`;
-}
-function zoomAt(f, px, py) {
-  const [w, h] = msize(), mpp = (2 * view.half) / w;
-  const mx = view.cx + (px - w / 2) * mpp, mz = view.cz - (py - h / 2) * mpp;
-  const half = Math.min(EDGE * 1.1, Math.max(15, view.half * f));
-  const k = half / view.half;
-  view = { cx: mx - (mx - view.cx) * k, cz: mz - (mz - view.cz) * k, half };
-  drawMap();
-}
-function centerOn(c, half) { view = { cx: c.x, cz: c.z, half: half || view.half }; drawMap(); }
-mapEl.addEventListener("wheel", e => { e.preventDefault(); const b = mapEl.getBoundingClientRect(); zoomAt(e.deltaY > 0 ? 1.25 : 0.8, e.clientX - b.left, e.clientY - b.top); }, { passive: false });
-let drag = null;
-mapEl.addEventListener("pointerdown", e => { drag = { x: e.clientX, y: e.clientY, cx: view.cx, cz: view.cz, moved: false, target: e.target }; mapEl.setPointerCapture(e.pointerId); });
-mapEl.addEventListener("pointermove", e => {
-  if (!drag) return;
-  const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
-  if (Math.abs(dx) + Math.abs(dy) > 4) drag.moved = true;
-  if (!drag.moved) return;
-  const mpp = (2 * view.half) / msize()[0];
-  view.cx = drag.cx - dx * mpp; view.cz = drag.cz + dy * mpp; drawMap();
-});
-mapEl.addEventListener("pointerup", e => {
-  if (drag && !drag.moved) {
-    const hit = document.elementFromPoint(e.clientX, e.clientY);
-    const i = hit && hit.dataset && hit.dataset.i; pick(i === undefined ? -1 : +i);
-  }
-  drag = null;
-});
-document.getElementById("v-world").onclick = () => {
-  // que entre el mundo entero: el lado corto del mapa manda
-  view = { cx: 0, cz: 0, half: EDGE * 1.05 * Math.max(1, msize()[0] / msize()[1]) }; drawMap();
-};
-document.getElementById("v-base").onclick = () => { view = { ...HOME }; drawMap(); };
-document.getElementById("v-in").onclick = () => zoomAt(0.6, msize()[0] / 2, msize()[1] / 2);
-document.getElementById("v-out").onclick = () => zoomAt(1.6, msize()[0] / 2, msize()[1] / 2);
-new ResizeObserver(drawMap).observe(mapEl);
-
-// Las coincidencias de la busqueda se marcan en el mapa.
-function updateHits() {
-  const q = norm(state.q.trim());
-  if (!q && state.cat === "Todo") { hits = null; drawMap(); return; }
-  hits = new Set();
-  D.containers.forEach((c, i) => {
-    if (!state.scope.has(where(c))) return;
-    if (c.items.some(([p]) => (state.cat === "Todo" || C(p) === state.cat) && (!q || norm(N(p)).includes(q) || norm(p).includes(q)))) hits.add(i);
-  });
-  drawMap();
-}
-function showOnMap(i) {
-  const c = D.containers[i];
-  centerOn(c, Math.min(view.half, Math.hypot(c.x - D.base.x, c.z - D.base.z) < D.base.r ? 70 : 400));
-  pick(i);
-  document.getElementById("h-map").scrollIntoView({ behavior: "smooth", block: "start" });
-}
-document.addEventListener("click", e => { const b = e.target.closest("[data-show]"); if (b) { e.preventDefault(); showOnMap(+b.dataset.show); } });
-
-renderChips(); renderList(); updateHits();
+renderChips(); renderList();
 </script>
 
 </body>

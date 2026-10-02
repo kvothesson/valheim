@@ -12,7 +12,7 @@ import sys
 import urllib.request
 from datetime import datetime, timedelta, timezone
 
-from zdo import Reader, parse_items, stable_hash, world_objects
+from zdo import parse_items, stable_hash, world_objects
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HASHES = {int(k): v for k, v in json.load(open(os.path.join(ROOT, "data", "hashes.json"))).items()}
@@ -34,16 +34,6 @@ ART = timezone(timedelta(hours=-3))
 
 def name_es(prefab):
     return NAMES.get(prefab, {}).get("es", prefab)
-
-
-def world_meta(world_dir):
-    """Nombre y semilla del mundo, del .fwl2: u32 tamano, u32 version, nombre, semilla."""
-    fwl = sorted(glob.glob(os.path.join(world_dir, "_main.*.fwl2")))
-    if not fwl:
-        return "", ""
-    r = Reader(open(fwl[-1], "rb").read())
-    r.u32(); r.u32()
-    return r.string(), r.string()
 
 
 def build(world_dir):
@@ -80,10 +70,7 @@ def build(world_dir):
 
     ok = sorted(glob.glob(os.path.join(world_dir, "_main.*.ok")), key=os.path.getmtime)
     saved = datetime.fromtimestamp(os.path.getmtime(ok[-1]) if ok else 0, ART)
-    world, seed = world_meta(world_dir)
-    return {"world": world, "seed": seed,
-            "base": {"x": BASE[0], "z": BASE[1], "r": BASE_RADIUS},
-            "saved": saved.isoformat(timespec="minutes"),
+    return {"saved": saved.isoformat(timespec="minutes"),
             "built": datetime.now(ART).isoformat(timespec="minutes"),
             "containers": containers, "stations": stations,
             "names": {p: NAMES.get(p, {"es": p, "cat": "Otros"}) for p in sorted(used)}}
