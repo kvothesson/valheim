@@ -4,8 +4,8 @@ Páginas de nuestros mundos de Valheim, una carpeta por mundo:
 
 | Dirección | Qué es |
 |---|---|
-| `kvothesson.github.io/valheim/` | lista de mundos |
-| `kvothesson.github.io/valheim/pancheim/` | Arcón de Pancheim: el inventario del mundo |
+| `kvothesson.com/valheim/` | lista de mundos |
+| `kvothesson.com/valheim/pancheim/` | Arcón de Pancheim: el inventario del mundo |
 
 ## Arcón de Pancheim
 
@@ -36,7 +36,7 @@ en el servidor.
 3. **Actions → Actualizar inventario → Run workflow** para la primera
    corrida. Si falla en "Bajar el mundo", revisá los secretos y la carpeta.
 
-La página queda en `https://kvothesson.github.io/valheim/pancheim/`.
+La página queda en `https://kvothesson.com/valheim/pancheim/` (GitHub Pages usa el dominio propio de kvothesson.github.io).
 
 ## Cosas a saber
 
